@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>ApplyFlow 测试表单</title>
+    <link rel="stylesheet" href="../content/content.css">
+    <style>label,.form-item{display:block;margin:12px 0}fieldset{margin:20px 0;padding:16px}input,select,textarea{margin-left:8px}.mock-options{margin-left:70px}.mock-options[hidden]{display:none}</style>
+  </head>
+  <body>
+    <h1>校招申请测试表单</h1>
+    <aside id="testControls">
+      <button id="testScan" type="button">测试识别</button>
+      <button id="testFill" type="button">测试填写</button>
+      <output id="testResult">等待测试</output>
+    </aside>
+    <form>
+      <label>中文姓名 <input name="candidateName"></label>
+      <label>手机号码 <input name="mobile"></label>
+      <label>电子邮箱 <input type="email" name="email"></label>
+      <label>出生日期 <input class="ant-calendar-picker-input" readonly placeholder="请选择出生日期"></label>
+      <div class="form-item">
+        <div class="field-label">性别</div>
+        <input id="mockGender" readonly placeholder="请选择">
+        <div id="mockGenderOptions" class="mock-options" role="listbox" hidden>
+          <div role="option">男</div><div role="option">女</div>
+        </div>
+      </div>
+      <section id="educationSection"><h2>教育经历</h2><div id="educationRecords"></div><div class="add-more-btn" role="button">添加新的教育经历</div></section>
+      <section id="experienceSection"><h2>实习经历</h2><div id="experienceRecords"></div><div class="add-more-btn" role="button">添加新的实习经历</div></section>
+      <section id="projectSection"><h2>项目经历</h2><div id="projectsRecords"></div><div class="add-more-btn" role="button">添加新的项目经验</div></section>
+      <label>为什么选择本公司？ <textarea name="whyUs"></textarea></label>
+      <button type="submit">提交申请</button>
+    </form>
+    <script>
+      if (!globalThis.chrome?.runtime?.id) {
+        const profile = {
+          basic: { nameZh: "林晨曦", nameEn: "Chenxi Lin", phone: "13800138027", email: "chenxi.lin.test@example.com", gender: "女", birthDate: "2003-08-16", currentCity: "上海", hometown: "江苏省苏州市", website: "https://github.com/chenxi-lin-demo" },
+          education: [
+            { school: "上海交通大学", college: "计算机学院", major: "计算机科学与技术", level: "硕士研究生", degree: "工学硕士", startDate: "2024-09", endDate: "2027-06", gpa: "3.82/4.00", rank: "前 15%", highest: "是" },
+            { school: "苏州大学", college: "计算机科学与技术学院（软件学院）", major: "软件工程", level: "本科", degree: "工学学士", startDate: "2020-09", endDate: "2024-06", gpa: "3.72/4.00", rank: "前 15%", highest: "否" }
+          ],
+          experience: [
+            { company: "星河互联科技有限公司", department: "企业效率产品部", title: "前端开发实习生", startDate: "2026-06", endDate: "2026-09", description: "参与企业协同平台表单引擎开发。" },
+            { company: "云帆数据实验室", department: "数据应用组", title: "软件开发实习生", startDate: "2025-07", endDate: "2025-10", description: "协助开发日志分析工具。" }
+          ],
+          projects: [
+            { name: "校园活动智能管理平台", role: "项目负责人 / 全栈开发", startDate: "2025-09", endDate: "2026-03", description: "面向学生社团的活动发布、报名、签到与统计平台。" },
+            { name: "轻量级浏览器表单助手", role: "独立开发者", startDate: "2026-02", endDate: "2026-05", description: "研究网页字段语义识别与表单事件触发。" }
+          ],
+          languages: [{ language: "英语", examType: "大学英语", level: "六级", score: "523", proficiency: "熟练", description: "可阅读英文技术文档" }],
+          awards: [{ level: "省级", name: "全国大学生计算机设计大赛华东赛区二等奖", date: "2025-08-20", description: "负责核心功能实现与答辩" }],
+          other: { skills: "JavaScript、TypeScript、Vue 3、React、Node.js、Python、SQL" },
+          preferences: { desiredRole: "前端开发工程师 / 软件开发工程师", desiredCity: "上海、杭州、苏州", availableDate: "2027-07-01" }
+        };
+        let messageListener;
+        globalThis.chrome = {
+          storage: { local: { get: async (key) => key === "profile" ? { profile } : {}, set: async () => undefined } },
+          runtime: {
+            onMessage: { addListener: (listener) => { messageListener = listener; } },
+            sendMessage: async () => undefined
+          }
+        };
+        globalThis.__applyFlowTest = {
+          send(type) {
+            return new Promise((resolve) => messageListener({ type }, {}, resolve));
+          }
+        };
+      }
+    </script>
+    <script>
+      const recordTemplates = {
+        education: (index) => `<fieldset class="education-record"><legend>教育经历 ${index}</legend><label>院校名称 <input name="school-${index}"></label><label>所学专业 <input name="major-${index}"></label><label>学历 <select name="education-${index}"><option value="">请选择</option><option>高中</option><option>本科</option><option>硕士</option><option>博士</option></select></label><label>入学时间 <input type="month" name="eduStart-${index}"></label><label>预计毕业时间 <input type="month" name="eduEnd-${index}"></label></fieldset>`,
+        experience: (index) => `<fieldset class="experience-record"><legend>实习经历 ${index}</legend><label>公司名称 <input name="company-${index}"></label><label>职位 <input name="title-${index}"></label><label>开始时间 <input type="month" name="expStart-${index}"></label><label>结束时间 <input type="month" name="expEnd-${index}"></label><label>工作内容 <textarea name="expDescription-${index}"></textarea></label></fieldset>`,
+        projects: (index) => `<fieldset class="project-record"><legend>项目经历 ${index}</legend><label>项目名称 <input name="projectName-${index}"></label><label>项目角色 <input name="projectRole-${index}"></label><label>开始时间 <input type="month" name="projectStart-${index}"></label><label>结束时间 <input type="month" name="projectEnd-${index}"></label><label>项目描述 <textarea name="projectDescription-${index}"></textarea></label></fieldset>`,
+      };
+      function addRecord(section) {
+        const container = document.getElementById(`${section}Records`);
+        const index = container.children.length + 1;
+        container.insertAdjacentHTML("beforeend", recordTemplates[section](index));
+      }
+      addRecord("education");
+      document.querySelector("#educationSection .add-more-btn").addEventListener("click", () => addRecord("education"));
+      document.querySelector("#experienceSection .add-more-btn").addEventListener("click", () => addRecord("experience"));
+      document.querySelector("#projectSection .add-more-btn").addEventListener("click", () => addRecord("projects"));
+    </script>
+    <script src="../shared/schema.js"></script>
+    <script src="../content/content.js"></script>
+    <script>
+      document.getElementById("mockGender").addEventListener("click", () => { document.getElementById("mockGenderOptions").hidden = false; });
+      document.getElementById("mockGenderOptions").addEventListener("click", (event) => {
+        if (event.target.getAttribute("role") !== "option") return;
+        document.getElementById("mockGender").value = event.target.textContent;
+        document.getElementById("mockGenderOptions").hidden = true;
+      });
+      document.getElementById("testScan").addEventListener("click", async () => {
+        const result = await globalThis.__applyFlowTest.send("APPLYFLOW_SCAN");
+        document.getElementById("testResult").dataset.entries = JSON.stringify(result.entries);
+        document.getElementById("testResult").textContent = `识别 ${result.entries.length} 项，可填写 ${result.fillableCount} 项，手动 ${result.manualCount + result.missingCount} 项`;
+      });
+      document.getElementById("testFill").addEventListener("click", async () => {
+        const result = await globalThis.__applyFlowTest.send("APPLYFLOW_FILL");
+        document.getElementById("testResult").textContent = `已填写 ${result.filledCount} 项，失败 ${result.failedCount} 项`;
+      });
+    </script>
+  </body>
+</html>

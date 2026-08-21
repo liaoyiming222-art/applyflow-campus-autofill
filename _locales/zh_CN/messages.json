@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "ApplyFlow 校招填表助手",
+    "description": "扩展名称"
+  },
+  "extensionDescription": {
+    "message": "在招聘官网中识别并填写通用简历字段，特殊问题由用户自行完成。数据默认仅保存在本地，不会自动提交申请。",
+    "description": "Microsoft Edge 扩展商店短描述"
+  },
+  "actionTitle": {
+    "message": "在当前页面开启 ApplyFlow",
+    "description": "工具栏按钮提示"
+  }
+}

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>我的档案 · ApplyFlow</title>
+    <link rel="stylesheet" href="profile.css" />
+  </head>
+  <body>
+    <header>
+      <div><strong>ApplyFlow</strong><span>我的求职档案</span></div>
+      <div class="header-actions">
+        <button id="exportButton" class="secondary">导出档案</button>
+        <label class="secondary file-button">导入 JSON<input id="importInput" type="file" accept="application/json" /></label>
+        <label class="secondary file-button accent-file">解析简历<input id="resumeInput" type="file" accept=".docx,.txt,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain" /></label>
+        <button id="clearButton" class="danger-button">清除数据</button>
+        <button id="saveButton" class="primary">保存档案</button>
+      </div>
+    </header>
+
+    <main>
+      <aside>
+        <a href="#basic">基本信息</a>
+        <a href="#education">教育经历</a>
+        <a href="#experience">实习经历</a>
+        <a href="#work">工作经历</a>
+        <a href="#projects">项目经历</a>
+        <a href="#other">专业技能</a>
+        <a href="#languages">外语能力</a>
+        <a href="#awards">奖励荣誉</a>
+        <a href="#preferences">求职偏好</a>
+      </aside>
+
+      <div class="content">
+        <div class="privacy-note">档案默认只保存在当前浏览器本地。简历解析完全在本机完成，不接入 AI，也不会自动提交招聘申请。支持结构清晰的 DOCX 和 TXT；解析后请逐项检查再保存。</div>
+
+        <section id="basic">
+          <div class="section-title"><div><h1>基本信息</h1><p>只填写你愿意在招聘网站中重复使用的信息。</p></div></div>
+          <div class="grid" id="basicFields"></div>
+        </section>
+
+        <section id="education">
+          <div class="section-title"><div><h1>教育经历</h1><p>网页出现多段教育经历时，将按顺序匹配。</p></div><button class="add-button" data-add="education">+ 添加教育经历</button></div>
+          <div id="educationList" class="record-list"></div>
+        </section>
+
+        <section id="experience">
+          <div class="section-title"><div><h1>实习经历</h1><p>仅用于填写招聘网站的实习经历区块。</p></div><button class="add-button" data-add="experience">+ 添加实习</button></div>
+          <div id="experienceList" class="record-list"></div>
+        </section>
+        <section id="work">
+          <div class="section-title"><div><h1>工作经历</h1><p>档案有记录时才自动新增和填写；没有记录时不会操作网站工作经历。</p></div><button class="add-button" data-add="work">+ 添加工作</button></div>
+          <div id="workList" class="record-list"></div>
+        </section>
+
+        <section id="projects">
+          <div class="section-title"><div><h1>项目经历</h1><p>建议使用简洁、可直接粘贴到网申中的描述。</p></div><button class="add-button" data-add="projects">+ 添加项目</button></div>
+          <div id="projectsList" class="record-list"></div>
+        </section>
+
+        <section id="other">
+          <div class="section-title"><div><h1>专业技能</h1></div></div>
+          <div class="grid" id="otherFields"></div>
+        </section>
+
+        <section id="languages">
+          <div class="section-title"><div><h1>外语能力</h1><p>每门语言或每项考试单独保存，填写网页时按顺序匹配。</p></div><button class="add-button" data-add="languages">+ 添加外语能力</button></div>
+          <div id="languagesList" class="record-list"></div>
+        </section>
+
+        <section id="awards">
+          <div class="section-title"><div><h1>奖励荣誉</h1><p>每项奖励独立保存级别、名称、时间和描述。</p></div><button class="add-button" data-add="awards">+ 添加奖励荣誉</button></div>
+          <div id="awardsList" class="record-list"></div>
+        </section>
+
+        <section id="preferences">
+          <div class="section-title"><div><h1>求职偏好</h1><p>只填写客观偏好；是否调剂等公司问题仍由你决定。</p></div></div>
+          <div class="grid" id="preferenceFields"></div>
+        </section>
+      </div>
+    </main>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+    <script src="../shared/schema.js"></script>
+    <script src="resume-parser.js"></script>
+    <script src="profile.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ApplyFlow</title>
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <main>
+      <section id="emptyState" class="state-card hidden">
+        <div class="state-icon">◎</div>
+        <h1>当前页面尚未开启</h1>
+        <p>点击浏览器工具栏中的 ApplyFlow 图标，在招聘表单页面开启助手。</p>
+      </section>
+
+      <div id="assistantView">
+        <section class="summary-card">
+          <p class="eyebrow">当前页面</p>
+          <h1 id="pageStatus">正在识别表单…</h1>
+          <div class="metrics">
+            <div><strong id="fillableCount">0</strong><span>可自动填写</span></div>
+            <div><strong id="manualCount">0</strong><span>需要你填写</span></div>
+          </div>
+          <div class="saving-box">
+            <span>预计可节省</span>
+            <strong id="estimatedTime">约 0 分钟</strong>
+          </div>
+          <button id="fillButton" class="primary-button" disabled>填写通用字段</button>
+          <p class="hint">只填写明确匹配的通用信息，不会提交申请。</p>
+        </section>
+
+        <section id="resultCard" class="result-card hidden" aria-live="polite"></section>
+
+        <section class="fields-section">
+          <div class="section-heading">
+            <h2>识别结果</h2>
+            <button id="rescanButton" class="text-button">重新识别</button>
+          </div>
+          <div id="fieldList" class="field-list"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-actions">
+        <button id="profileButton">我的档案</button>
+        <button id="disableButton" class="danger-button" title="关闭侧边栏并移除当前页面的悬浮球">关闭页面助手</button>
+      </div>
+      <div id="totalSaved">累计节省约 0 分钟</div>
+    </footer>
+
+    <script src="../shared/schema.js"></script>
+    <script src="sidepanel.js"></script>
+  </body>
+</html>

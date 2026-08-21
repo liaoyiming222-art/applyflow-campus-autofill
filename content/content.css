@@ -1,0 +1,47 @@
+#applyflow-root {
+  all: initial;
+  position: fixed;
+  right: 18px;
+  top: 48%;
+  z-index: 2147483647;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
+}
+
+#applyflow-root .applyflow-orb {
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #7357ff, #5038d8);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(70, 48, 180, 0.32);
+  cursor: pointer;
+  font: 700 14px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+#applyflow-root .applyflow-orb:hover { transform: translateY(-1px); }
+#applyflow-root .applyflow-orb[data-count]:not([data-count="0"])::after {
+  content: attr(data-count);
+  position: absolute;
+  right: -4px;
+  top: -5px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 9px;
+  background: #ff5b6e;
+  color: white;
+  font: 700 11px/18px sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.applyflow-filled {
+  outline: 2px solid rgba(85, 201, 139, 0.75) !important;
+  outline-offset: 2px !important;
+}
+
+.applyflow-manual {
+  outline: 2px solid rgba(255, 180, 56, 0.75) !important;
+  outline-offset: 2px !important;
+}

@@ -1,0 +1,16 @@
+# Edge/Chrome 发布产物
+ApplyFlow-Edge-*.zip
+
+# 本地依赖与测试输出
+node_modules/
+tests/rendered-resume/
+playwright-report/
+test-results/
+
+# 编辑器与系统文件
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+

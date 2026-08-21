@@ -1,0 +1,19 @@
+{
+  "name": "applyflow-campus-autofill",
+  "version": "0.7.4",
+  "private": true,
+  "description": "Privacy-first campus recruitment form autofill extension for Microsoft Edge and Chrome.",
+  "scripts": {
+    "test": "npm run test:parser && npm run test:fixture",
+    "test:parser": "node tests/test-resume-parser.mjs",
+    "test:fixture": "node tests/test-goertek-fixture.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.55.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
+

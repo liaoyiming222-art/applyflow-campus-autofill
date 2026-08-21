@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "ApplyFlow Job Form Assistant",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Fills common resume fields on recruitment websites while leaving company-specific questions to you. Data stays local by default and applications are never submitted automatically.",
+    "description": "Microsoft Edge Add-ons short description"
+  },
+  "actionTitle": {
+    "message": "Enable ApplyFlow on this page",
+    "description": "Toolbar action tooltip"
+  }
+}
