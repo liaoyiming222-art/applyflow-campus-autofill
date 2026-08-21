@@ -152,11 +152,9 @@
     if (["education", "experience", "work", "projects", "languages", "awards"].includes(section)) {
       const records = profile[section] || [];
       if (section === "education" && property === "graduationYear") return String(records[occurrence]?.endDate || "").slice(0, 4);
-      return records[occurrence]?.[property] ?? "";
-    }
-    if (key === "preferences.desiredCity") {
-      const cities = String(profile.preferences?.desiredCity || "").split(/[、,，/]/).map((item) => item.trim()).filter(Boolean);
-      return cities[occurrence] || "";
+      const value = records[occurrence]?.[property] ?? "";
+      if (key === "awards.level" && String(value).trim()) return /国家级及以上|^国家级$/.test(String(value).trim()) ? "国家级及以上" : "其他";
+      return value;
     }
     return profile[section]?.[property] ?? "";
   }
@@ -212,10 +210,14 @@
       const label = candidates[0]?.text || "";
       const context = contextFor(element);
       let match = matchDefinition(candidates, context);
+      let duplicateLanguageValue = false;
+      let controlSlot = "";
       if (context === "language" && candidates.some((candidate) => normalize(candidate.text).includes(normalize("语言等级")))) {
         const groupedControls = Array.from(formContainer?.querySelectorAll("[role='combobox']") || []).filter(visible);
         const groupedIndex = groupedControls.indexOf(element);
-        const groupedKey = groupedIndex === 0 ? "languages.examType" : groupedIndex === 1 ? "languages.level" : "";
+        const groupedKey = groupedIndex === 0 ? "languages.language" : groupedIndex === 1 ? "languages.level" : "";
+        duplicateLanguageValue = groupedIndex === 0;
+        controlSlot = groupedIndex === 0 ? "language-level-language" : groupedIndex === 1 ? "language-level-value" : "";
         const groupedDefinition = schema.FIELD_DEFINITIONS.find((definition) => definition.key === groupedKey);
         if (groupedDefinition) match = { definition: groupedDefinition, score: 2000, label: groupedDefinition.labels[0] };
       }
@@ -227,8 +229,9 @@
       const { definition } = match;
 
       const indexKey = definition.key;
-      const index = occurrence.get(indexKey) || 0;
-      occurrence.set(indexKey, index + 1);
+      const seen = occurrence.get(indexKey) || 0;
+      const index = duplicateLanguageValue ? Math.max(0, seen - 1) : seen;
+      if (!duplicateLanguageValue) occurrence.set(indexKey, seen + 1);
       const value = getPathValue(profile, definition.key, index);
       const id = `af-${entries.length}-${Date.now()}`;
       element.dataset.applyflowId = id;
@@ -245,6 +248,7 @@
         canFill: String(value).trim().length > 0 && !unsupported,
         unsupported,
         occurrence: index,
+        controlSlot,
       });
     }
 
@@ -714,7 +718,7 @@
 
       const fillCurrentPass = async () => {
         for (const entry of lastScan.entries.filter((item) => item.canFill)) {
-          const fingerprint = `${entry.fieldKey}:${entry.occurrence}:${normalize(entry.label)}`;
+          const fingerprint = `${entry.fieldKey}:${entry.occurrence}:${normalize(entry.label)}:${entry.controlSlot || ""}`;
           if (processed.has(fingerprint)) continue;
           processed.add(fingerprint);
           const element = elementMap.get(entry.id);

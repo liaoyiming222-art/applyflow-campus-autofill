@@ -29,7 +29,7 @@
     languages: [],
     awards: [],
     other: { skills: "" },
-    preferences: { desiredRole: "", desiredCity: "", availableDate: "", recruitmentSource: "", expectedSalary: "" },
+    preferences: { desiredRole: "", desiredCity1: "", desiredCity2: "", desiredCity3: "", availableDate: "", recruitmentSource: "", expectedSalary: "" },
   };
 
   const FIELD_DEFINITIONS = [
@@ -96,7 +96,6 @@
 
     { key: "other.skills", labels: ["技能", "专业技能", "技能特长", "skills"] },
     { key: "languages.language", context: "language", labels: ["语言", "语种", "外语语种", "language"] },
-    { key: "languages.examType", context: "language", labels: ["考试类型", "语言考试类型", "考试类别", "exam type"] },
     { key: "languages.level", context: "language", labels: ["语言等级", "考试等级", "等级", "language level"] },
     { key: "languages.score", context: "language", labels: ["考试得分", "等级考试得分", "分数", "成绩", "score"] },
     { key: "languages.proficiency", context: "language", labels: ["熟练程度", "语言熟练程度", "掌握程度", "proficiency"] },
@@ -107,7 +106,9 @@
     { key: "awards.date", context: "award", labels: ["获奖时间", "奖励时间", "获奖日期", "award date"] },
     { key: "awards.description", context: "award", labels: ["详细描述", "奖励描述", "获奖描述", "description"] },
     { key: "preferences.desiredRole", labels: ["期望岗位", "求职意向", "意向职位", "目标岗位"] },
-    { key: "preferences.desiredCity", labels: ["期望城市", "意向城市", "期望工作地点", "工作意向地", "第一工作意向地", "第二工作意向地", "第三工作意向地"] },
+    { key: "preferences.desiredCity1", labels: ["第一期望城市", "第一工作意向地", "第一意向城市"] },
+    { key: "preferences.desiredCity2", labels: ["第二期望城市", "第二工作意向地", "第二意向城市"] },
+    { key: "preferences.desiredCity3", labels: ["第三期望城市", "第三工作意向地", "第三意向城市"] },
     { key: "preferences.availableDate", labels: ["到岗时间", "最快到岗时间", "可到岗日期"] },
     { key: "preferences.recruitmentSource", labels: ["招聘信息来源", "信息来源", "获知渠道", "招聘渠道"] },
     { key: "preferences.expectedSalary", labels: ["期望薪资", "期望薪酬", "期望月薪", "薪资期望"] },
@@ -127,7 +128,8 @@
     ["非全日制", "在职"],
     ["硕士研究生", "硕士", "研究生"],
     ["博士研究生", "博士"],
-    ["大学英语", "英语"],
+    ["六级", "CET 6", "CET6", "大学英语六级"],
+    ["四级", "CET 4", "CET4", "大学英语四级"],
   ];
 
   const CITY_CASCADER_PATHS = {
@@ -144,7 +146,15 @@
   }
 
   function emptyLanguage() {
-    return { language: "", examType: "", level: "", score: "", proficiency: "", description: "" };
+    return { language: "", level: "", score: "", proficiency: "", description: "" };
+  }
+
+  function normalizeLanguageLevel(value, examType = "") {
+    const level = String(value || "").trim();
+    const exam = String(examType || "").trim();
+    if (/^(?:大学英语)?六级$|^CET\s*6$/i.test(level) || (/大学英语/.test(exam) && /六级/.test(level))) return "CET 6";
+    if (/^(?:大学英语)?四级$|^CET\s*4$/i.test(level) || (/大学英语/.test(exam) && /四级/.test(level))) return "CET 4";
+    return level;
   }
 
   function emptyAward() {
@@ -154,7 +164,13 @@
   function normalizeProfile(raw = {}) {
     const defaults = cloneDefaultProfile();
     const legacyOther = raw.other || {};
-    const languages = Array.isArray(raw.languages) ? raw.languages.slice() : [];
+    const languages = Array.isArray(raw.languages) ? raw.languages.map((record) => ({
+      language: String(record?.language || ""),
+      level: normalizeLanguageLevel(record?.level, record?.examType),
+      score: String(record?.score || ""),
+      proficiency: String(record?.proficiency || ""),
+      description: String(record?.description || ""),
+    })) : [];
     const awards = Array.isArray(raw.awards) ? raw.awards.slice() : [];
     if (!languages.length && String(legacyOther.languages || "").trim()) {
       languages.push({ ...emptyLanguage(), description: String(legacyOther.languages).trim() });
@@ -162,12 +178,21 @@
     if (!awards.length && String(legacyOther.awards || "").trim()) {
       awards.push({ ...emptyAward(), description: String(legacyOther.awards).trim() });
     }
+    const rawPreferences = raw.preferences || {};
+    const legacyCities = String(rawPreferences.desiredCity || "").split(/[、,，/]/).map((item) => item.trim()).filter(Boolean);
+    const { desiredCity: _legacyDesiredCity, ...cleanPreferences } = rawPreferences;
     return {
       ...defaults,
       ...raw,
       basic: { ...defaults.basic, ...(raw.basic || {}) },
       other: { ...defaults.other, skills: legacyOther.skills || "" },
-      preferences: { ...defaults.preferences, ...(raw.preferences || {}) },
+      preferences: {
+        ...defaults.preferences,
+        ...cleanPreferences,
+        desiredCity1: rawPreferences.desiredCity1 || legacyCities[0] || "",
+        desiredCity2: rawPreferences.desiredCity2 || legacyCities[1] || "",
+        desiredCity3: rawPreferences.desiredCity3 || legacyCities[2] || "",
+      },
       education: Array.isArray(raw.education) ? raw.education : [],
       experience: Array.isArray(raw.experience) ? raw.experience : [],
       work: Array.isArray(raw.work) ? raw.work : [],
@@ -197,6 +222,7 @@
     CITY_CASCADER_PATHS,
     cloneDefaultProfile,
     normalizeProfile,
+    normalizeLanguageLevel,
     regionPath,
   };
 })(globalThis);

@@ -67,7 +67,7 @@
       experience: { company: "", department: "", title: "", startDate: "", endDate: "", description: "" },
       work: { company: "", department: "", title: "", startDate: "", endDate: "", description: "" },
       projects: { name: "", role: "", startDate: "", endDate: "", description: "" },
-      languages: { language: "", examType: "", level: "", score: "", proficiency: "", description: "" },
+      languages: { language: "", level: "", score: "", proficiency: "", description: "" },
       awards: { level: "", name: "", date: "", description: "" },
     };
     return { ...templates[section] };
@@ -89,7 +89,7 @@
       experience: { 公司名称: "company", 公司: "company", 部门: "department", 职位: "title", 开始时间: "startDate", 结束时间: "endDate", 工作内容: "description", 工作描述: "description" },
       work: { 公司名称: "company", 公司: "company", 部门: "department", 职位: "title", 开始时间: "startDate", 结束时间: "endDate", 工作内容: "description", 工作描述: "description" },
       projects: { 项目名称: "name", 项目角色: "role", 项目职务: "role", 项目职责: "role", 项目岗位: "role", 开始时间: "startDate", 结束时间: "endDate", 项目描述: "description", 项目成果: "description" },
-      languages: { 语言: "language", 语种: "language", 考试类型: "examType", 语言等级: "level", 考试等级: "level", 等级考试得分: "score", 考试得分: "score", 熟练程度: "proficiency", 补充说明: "description" },
+      languages: { 语言: "language", 语种: "language", 语言等级: "level", 考试等级: "level", 等级考试得分: "score", 考试得分: "score", 熟练程度: "proficiency", 补充说明: "description" },
       awards: { 奖励级别: "level", 奖项级别: "level", 奖励名称: "name", 奖项名称: "name", 获奖时间: "date", 获奖日期: "date", 详细描述: "description", 奖励描述: "description" },
     };
 
@@ -113,21 +113,28 @@
         if (key) current[key] = current[key] && key === "description" ? `${current[key]}\n${value}` : value;
       } else if (section === "preferences") {
         if (/岗位|职位/.test(label)) profile.preferences.desiredRole = value;
-        else if (/城市|地点/.test(label)) profile.preferences.desiredCity = value;
+        else if (/第一.*(?:城市|地点)|第一工作意向地/.test(label)) profile.preferences.desiredCity1 = value;
+        else if (/第二.*(?:城市|地点)|第二工作意向地/.test(label)) profile.preferences.desiredCity2 = value;
+        else if (/第三.*(?:城市|地点)|第三工作意向地/.test(label)) profile.preferences.desiredCity3 = value;
+        else if (/城市|地点/.test(label)) {
+          const cities = value.split(/[、,，/]/).map((item) => item.trim()).filter(Boolean);
+          [profile.preferences.desiredCity1, profile.preferences.desiredCity2, profile.preferences.desiredCity3] = cities;
+        }
         else if (/到岗/.test(label)) profile.preferences.availableDate = value;
         else if (/来源|渠道/.test(label)) profile.preferences.recruitmentSource = value;
         else if (/薪资|薪酬|月薪/.test(label)) profile.preferences.expectedSalary = value;
       } else if (section === "skills") profile.other.skills = [profile.other.skills, value].filter(Boolean).join("\n");
     }
 
+    const normalizedProfile = globalScope.ApplyFlowSchema.normalizeProfile(profile);
     const populated = [
-      ...Object.values(profile.basic), ...profile.education.flatMap(Object.values),
-      ...profile.experience.flatMap(Object.values), ...profile.work.flatMap(Object.values), ...profile.projects.flatMap(Object.values),
-      ...profile.languages.flatMap(Object.values), ...profile.awards.flatMap(Object.values),
-      ...Object.values(profile.other), ...Object.values(profile.preferences),
+      ...Object.values(normalizedProfile.basic), ...normalizedProfile.education.flatMap(Object.values),
+      ...normalizedProfile.experience.flatMap(Object.values), ...normalizedProfile.work.flatMap(Object.values), ...normalizedProfile.projects.flatMap(Object.values),
+      ...normalizedProfile.languages.flatMap(Object.values), ...normalizedProfile.awards.flatMap(Object.values),
+      ...Object.values(normalizedProfile.other), ...Object.values(normalizedProfile.preferences),
     ].filter((value) => String(value).trim()).length;
     if (!populated) throw new Error("未识别到结构化简历内容，请使用带有明确章节和字段标签的 DOCX/TXT");
-    return { profile, populated, rawText: text };
+    return { profile: normalizedProfile, populated, rawText: text };
   }
 
   async function parseFile(file) {

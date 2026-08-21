@@ -9,7 +9,7 @@ const text = await globalThis.ApplyFlowResumeParser.extractDocxText(buffer);
 const result = globalThis.ApplyFlowResumeParser.parseResumeText(text);
 
 const checks = [
-  [result.populated, 111, "非空结构化字段总数"],
+  [result.populated, 112, "非空结构化字段总数"],
   [result.profile.basic.nameZh, "林晨曦", "姓名"],
   [result.profile.basic.phone, "13800138027", "手机号"],
   [result.profile.education[0]?.school, "上海交通大学", "研究生学校"],
@@ -28,8 +28,7 @@ const checks = [
   [result.profile.projects[1]?.role, "独立开发者", "第二段项目职务"],
   [result.profile.languages.length, 1, "外语能力数量"],
   [result.profile.languages[0]?.language, "英语", "外语语种"],
-  [result.profile.languages[0]?.examType, "大学英语", "外语考试类型"],
-  [result.profile.languages[0]?.level, "六级", "外语等级"],
+  [result.profile.languages[0]?.level, "CET 6", "外语等级"],
   [result.profile.languages[0]?.score, "523", "外语成绩"],
   [result.profile.awards.length, 2, "奖励荣誉数量"],
   [result.profile.awards[0]?.level, "省级", "第一项奖励级别"],
@@ -38,7 +37,9 @@ const checks = [
   [result.profile.awards[0]?.date, "2025-08-20", "第一项获奖时间"],
   [result.profile.awards[1]?.level, "校级", "第二项奖励级别"],
   [result.profile.awards[1]?.date, "2025-10-15", "第二项获奖时间"],
-  [result.profile.preferences.desiredCity, "上海、杭州、苏州", "期望城市"],
+  [result.profile.preferences.desiredCity1, "上海", "第一期望城市"],
+  [result.profile.preferences.desiredCity2, "杭州", "第二期望城市"],
+  [result.profile.preferences.desiredCity3, "苏州", "第三期望城市"],
   [result.profile.basic.nationality, "中国", "国籍"],
   [result.profile.basic.idType, "身份证", "证件类型"],
   [result.profile.basic.idNumber, "TEST-CERT-2027-001", "证件号码"],
@@ -86,4 +87,16 @@ if (workResult.profile.work.length !== 1 || workResult.profile.work[0]?.company 
 }
 if (workResult.profile.experience.length !== 0) throw new Error("工作经历被错误写入实习数组");
 
-console.log(JSON.stringify({ populated: result.populated, checks: checks.length + 5, ok: true }));
+const migrated = globalThis.ApplyFlowSchema.normalizeProfile({
+  languages: [{ language: "英语", examType: "大学英语", level: "六级", score: "523" }],
+  preferences: { desiredCity: "上海、杭州、苏州" },
+});
+if (migrated.languages[0]?.level !== "CET 6" || "examType" in migrated.languages[0]) {
+  throw new Error("旧外语档案未迁移为无考试类型的 CET 6 结构");
+}
+if (migrated.preferences.desiredCity1 !== "上海" || migrated.preferences.desiredCity2 !== "杭州" || migrated.preferences.desiredCity3 !== "苏州") {
+  throw new Error("旧期望城市未迁移为三个独立城市字段");
+}
+if ("desiredCity" in migrated.preferences) throw new Error("迁移后仍保留旧期望城市字段");
+
+console.log(JSON.stringify({ populated: result.populated, checks: checks.length + 8, ok: true }));

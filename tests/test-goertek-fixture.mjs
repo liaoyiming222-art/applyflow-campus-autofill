@@ -39,6 +39,10 @@ try {
   expect(values.includes("全国大学生计算机设计大赛华东赛区二等奖"), "奖励名称未回填");
   expect(values.includes("2024-2025 学年校级二等奖学金"), "第二段奖励名称未回填");
   expect(result.selected.includes("汉族"), "民族下拉未回填");
+  expect(result.selected.filter((value) => value === "英语").length >= 2, "语言字段未按页面两个英语下拉完成选择");
+  expect(result.selected.includes("CET 6"), "外语等级未选择 CET 6");
+  expect(result.selected.filter((value) => value === "其他").length >= 2, "省级和校级奖励未映射为其他");
+  expect(result.selected.includes("上海") && result.selected.includes("杭州") && result.selected.includes("苏州"), "三个工作意向地未分别填写");
   expect(result.selected.includes("校园招聘网站"), "招聘来源同义词未回填");
   expect(result.selected.some((value) => value.includes("江苏省苏州市")), "籍贯 TreeSelect 未选择到苏州市");
   const scopedFailures = result.fill.failedDetails.filter((item) => /^(experience|work|projects|languages|awards)\./.test(item.fieldKey));
@@ -64,6 +68,7 @@ try {
     scan: result.scan,
     fill: { filledCount: result.fill.filledCount, failedCount: result.fill.failedCount, scopedFailures, knownUnrelatedFailures: result.fill.failedDetails.filter((item) => !scopedFailures.includes(item)) },
     counts: result.counts,
+    selected: result.selected,
     failures,
     browserConsole: consoleMessages.filter((line) => /ApplyFlow|error/i.test(line)),
   }, null, 2));

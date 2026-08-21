@@ -31,7 +31,7 @@ const fieldConfigs = {
     ["endDate", "结束时间", "month"], ["description", "项目描述与成果", "textarea", true],
   ],
   languages: [
-    ["language", "语言"], ["examType", "考试类型"], ["level", "语言等级"], ["score", "考试得分"],
+    ["language", "语言"], ["level", "语言等级"], ["score", "考试得分"],
     ["proficiency", "熟练程度"], ["description", "补充说明", "textarea", true],
   ],
   awards: [
@@ -39,7 +39,7 @@ const fieldConfigs = {
     ["description", "详细描述", "textarea", true],
   ],
   other: [["skills", "专业技能", "textarea", true]],
-  preferences: [["desiredRole", "期望岗位"], ["desiredCity", "期望城市"], ["availableDate", "可到岗日期", "date"], ["recruitmentSource", "招聘信息来源"], ["expectedSalary", "期望薪酬"]],
+  preferences: [["desiredRole", "期望岗位"], ["desiredCity1", "第一期望城市"], ["desiredCity2", "第二期望城市"], ["desiredCity3", "第三期望城市"], ["availableDate", "可到岗日期", "date"], ["recruitmentSource", "招聘信息来源"], ["expectedSalary", "期望薪酬"]],
 };
 
 function createField(section, config, recordIndex = null) {

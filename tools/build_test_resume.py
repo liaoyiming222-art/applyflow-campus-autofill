@@ -229,7 +229,7 @@ add_labeled_paragraph(doc, "技能", "JavaScript、TypeScript、HTML、CSS、Vue
 doc.add_heading("外语能力", level=1)
 add_record_marker(doc, 1)
 for label, value in (
-    ("语言", "英语"), ("考试类型", "大学英语"), ("语言等级", "六级"),
+    ("语言", "英语"), ("语言等级", "CET 6"),
     ("等级考试得分", "523"), ("熟练程度", "熟练"),
     ("补充说明", "可阅读英文技术文档并进行日常书面沟通"),
 ):
@@ -252,7 +252,7 @@ for label, value in (
     add_labeled_paragraph(doc, label, value)
 
 doc.add_heading("求职偏好", level=1)
-for label, value in (("期望岗位", "前端开发工程师 / 软件开发工程师"), ("期望城市", "上海、杭州、苏州"), ("可到岗日期", "2027-07-01"), ("招聘信息来源", "校园招聘官网"), ("期望薪酬", "15000")):
+for label, value in (("期望岗位", "前端开发工程师 / 软件开发工程师"), ("第一期望城市", "上海"), ("第二期望城市", "杭州"), ("第三期望城市", "苏州"), ("可到岗日期", "2027-07-01"), ("招聘信息来源", "校园招聘官网"), ("期望薪酬", "15000")):
     add_labeled_paragraph(doc, label, value)
 
 footer = section.footer.paragraphs[0]

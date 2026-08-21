@@ -28,17 +28,17 @@ const profile={
     {name:"校园活动智能管理平台",role:"项目负责人 / 全栈开发",startDate:"2025-09",endDate:"2026-03",description:"完成活动发布、报名与统计平台。"},
     {name:"轻量级浏览器表单助手",role:"独立开发者",startDate:"2026-02",endDate:"2026-05",description:"实现字段识别与自动填写原型。"}
   ],
-  languages:[{language:"英语",examType:"大学英语",level:"六级",score:"523",proficiency:"熟练",description:"可阅读英文技术文档并进行日常书面沟通"}],
+  languages:[{language:"英语",level:"CET 6",score:"523",proficiency:"熟练",description:"可阅读英文技术文档并进行日常书面沟通"}],
   awards:[{level:"省级",name:"全国大学生计算机设计大赛华东赛区二等奖",date:"2025-08",description:"负责核心功能实现与现场答辩"},{level:"校级",name:"2024-2025 学年校级二等奖学金",date:"2025-06",description:"依据学年综合成绩与实践表现评定"}],
   other:{skills:"JavaScript、TypeScript、Vue 3、React、Node.js、Python、SQL"},
-  preferences:{desiredCity:"上海、杭州、苏州",recruitmentSource:"校园招聘官网",expectedSalary:"12000"}
+  preferences:{desiredCity1:"上海",desiredCity2:"杭州",desiredCity3:"苏州",recruitmentSource:"校园招聘官网",expectedSalary:"12000"}
 };
 let messageListener;
 globalThis.chrome={storage:{local:{get:async k=>k==="profile"?{profile}:{},set:async()=>{}}},runtime:{id:"fixture",onMessage:{addListener:f=>messageListener=f},sendMessage:async()=>{}}};
 globalThis.__applyFlowTest={send:type=>new Promise(resolve=>messageListener({type},{},resolve))};
 const form=document.getElementById("resumeForm");
 const options={
-  source:["校园招聘网站","公司官网","官方网站"],year:["2026","2027","2028"],nationality:["中国","美国","英国"],ethnicity:["汉族","回族","满族"],political:["中共党员","共青团员","群众"],marital:["未婚","已婚"],city:["上海","杭州","苏州","潍坊"],school:["上海交通大学","苏州大学"],studyType:["全日制统招","非全日制"],level:["本科","硕士研究生","博士研究生"],degree:["工学学士","工学硕士","工学博士"],discipline:["计算机科学与技术","软件工程"],language:["英语","日语"],exam:["大学英语","雅思","托福"],langLevel:["四级","六级"],awardLevel:["校级","省级","国家级"]
+  source:["校园招聘网站","公司官网","官方网站"],year:["2026","2027","2028"],nationality:["中国","美国","英国"],ethnicity:["汉族","回族","满族"],political:["中共党员","共青团员","群众"],marital:["未婚","已婚"],city:["上海","杭州","苏州","潍坊"],school:["上海交通大学","苏州大学"],studyType:["全日制统招","非全日制"],level:["本科","硕士研究生","博士研究生"],degree:["工学学士","工学硕士","工学博士"],discipline:["计算机科学与技术","软件工程"],language:["英语","日语"],langLevel:["CET 4","CET 6","专业四级","专业八级","托福","雅思"],awardLevel:["国家级及以上","其他"]
 };
 const n=(tag,attrs={},text="")=>{const e=document.createElement(tag);for(const[k,v]of Object.entries(attrs)){if(k==="class")e.className=v;else e.setAttribute(k,v)}e.textContent=text;return e};
 function item(label,control){const w=n("div",{class:"ant-form-item"});w.append(n("div",{class:"ant-form-item-label"},label));w.append(control);return w}
@@ -59,7 +59,7 @@ repeat("实习经历","experience","添加新的实习经历",()=>{const r=n("di
 const workSection=repeat("工作经历","work","添加新的工作经历",()=>{const r=n("div",{class:"record"});r.append(text("企业名称","工作企业名称"),text("职位名称","工作职位名称"),picker("开始时间"),picker("结束时间"),text("工作描述","工作经历描述","textarea"));return r});
 workRecords.append((()=>{const r=n("div",{class:"record"});r.append(text("企业名称","工作企业名称"),text("职位名称","工作职位名称"),picker("开始时间"),picker("结束时间"),text("工作描述","工作经历描述","textarea"));return r})());
 repeat("项目经验","projects","添加新的项目经验",()=>{const r=n("div",{class:"record"});r.append(text("项目名称","项目名称"),text("项目职务","项目职务"),picker("开始时间"),picker("结束时间"),text("项目描述","项目描述","textarea"));return r});
-repeat("外语水平","languages","添加新的外语水平",()=>{const r=n("div",{class:"record"});r.append(select("语言","请选择语言",options.language));const levels=n("div",{class:"ant-form-item"});levels.append(n("div",{class:"ant-form-item-label"},"语言等级"),select("考试类型","请选择考试类型",options.exam).lastChild,select("考试等级","请选择考试等级",options.langLevel).lastChild);r.append(levels,text("等级考试得分","等级考试得分"),text("熟练程度","熟练程度"),text("补充说明","补充说明","textarea"));return r});
+repeat("外语水平","languages","添加新的外语水平",()=>{const r=n("div",{class:"record"});r.append(select("语言","请选择语言",options.language));const levels=n("div",{class:"ant-form-item"});levels.append(n("div",{class:"ant-form-item-label"},"语言等级"),select("语言","请选择语言",options.language).lastChild,select("考试等级","请选择考试等级",options.langLevel).lastChild);r.append(levels,text("等级考试得分","等级考试得分"),text("熟练程度","熟练程度"),text("补充说明","补充说明","textarea"));return r});
 repeat("奖励荣誉","awards","添加新的奖励荣誉",()=>{const r=n("div",{class:"record"});r.append(select("奖励级别","请选择奖励级别",options.awardLevel),text("奖励名称","奖励名称"),picker("获奖时间","day"),text("详细描述","详细描述","textarea"));return r});
 const family=section("家庭关系");family.append(radio("是否有亲属在歌尔工作",["是","否"]),text("亲属姓名","亲属姓名"));
 section("其他技能").append(text("其他技能","其他技能"));
