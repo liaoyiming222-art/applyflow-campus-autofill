@@ -14,6 +14,7 @@ $output = Join-Path $projectRoot $OutputPath
 $items = @(
   "_locales",
   "content",
+  "icons",
   "profile",
   "shared",
   "sidepanel",

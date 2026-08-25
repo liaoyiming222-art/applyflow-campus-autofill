@@ -36,4 +36,14 @@ ApplyFlow 是一款帮助用户在招聘网站填写通用简历字段的 Micros
 
 ## 联系方式
 
-正式发布前，开发者应在这里补充可公开访问的支持邮箱或网站地址，并将本说明发布到公开网页，作为 Microsoft Partner Center 中的隐私政策 URL。
+如有隐私或产品支持问题，请通过项目的公开支持页面联系开发者：
+
+https://github.com/liaoyiming222-art/applyflow-campus-autofill/issues
+
+当前公开隐私政策地址：
+
+https://github.com/liaoyiming222-art/applyflow-campus-autofill/blob/main/PRIVACY.md
+
+如启用 GitHub Pages，也可以使用更适合公开展示的网页版本：
+
+https://liaoyiming222-art.github.io/applyflow-campus-autofill/privacy.html
