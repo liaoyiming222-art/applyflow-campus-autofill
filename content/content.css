@@ -8,15 +8,30 @@
 }
 
 #applyflow-root .applyflow-orb {
-  width: 48px;
-  height: 48px;
-  border: 0;
-  border-radius: 50%;
-  background: linear-gradient(145deg, #7357ff, #5038d8);
-  color: #fff;
-  box-shadow: 0 8px 24px rgba(70, 48, 180, 0.32);
-  cursor: pointer;
-  font: 700 14px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  all: initial !important;
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 48px !important;
+  box-sizing: border-box !important;
+  width: 48px !important;
+  min-width: 48px !important;
+  max-width: 48px !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  max-height: 48px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  background: linear-gradient(145deg, #7357ff, #5038d8) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 24px rgba(70, 48, 180, 0.32) !important;
+  cursor: pointer !important;
+  font: 700 14px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  text-align: center !important;
+  appearance: none !important;
 }
 
 #applyflow-root .applyflow-orb:hover { transform: translateY(-1px); }
