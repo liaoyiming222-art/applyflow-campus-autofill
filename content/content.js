@@ -793,9 +793,28 @@
     button.title = "打开 ApplyFlow";
     button.textContent = "AF";
     button.dataset.count = "0";
-    button.addEventListener("click", () => chrome.runtime.sendMessage({ type: "APPLYFLOW_OPEN_PANEL" }));
+    button.addEventListener("click", async () => {
+      button.disabled = true;
+      try {
+        const response = await chrome.runtime.sendMessage({ type: "APPLYFLOW_OPEN_PANEL" });
+        if (response?.ok) hideOrb();
+      } finally {
+        button.disabled = false;
+      }
+    });
     root.appendChild(button);
     document.documentElement.appendChild(root);
+  }
+
+  function hideOrb() {
+    const root = document.getElementById("applyflow-root");
+    if (root) root.hidden = true;
+  }
+
+  function showOrb() {
+    ensureOrb();
+    const root = document.getElementById("applyflow-root");
+    if (root) root.hidden = false;
   }
 
   function updateOrbCount(scan) {
@@ -821,6 +840,14 @@
     }
     if (message?.type === "APPLYFLOW_DISABLE") {
       disableAssistant();
+      sendResponse({ ok: true });
+    }
+    if (message?.type === "APPLYFLOW_HIDE_ORB") {
+      hideOrb();
+      sendResponse({ ok: true });
+    }
+    if (message?.type === "APPLYFLOW_SHOW_ORB") {
+      showOrb();
       sendResponse({ ok: true });
     }
     return false;

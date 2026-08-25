@@ -16,21 +16,16 @@
 
       <div id="assistantView">
         <section class="summary-card">
-          <p class="eyebrow">当前页面</p>
-          <h1 id="pageStatus">正在识别表单…</h1>
+          <h1>当前页面</h1>
+          <p id="pageStatus" class="status-line" aria-live="polite">正在识别表单…</p>
           <div class="metrics">
-            <div><strong id="fillableCount">0</strong><span>可自动填写</span></div>
-            <div><strong id="manualCount">0</strong><span>需要你填写</span></div>
+            <div><strong id="primaryMetricValue">…</strong><span id="primaryMetricLabel">正在识别</span></div>
+            <div><strong id="secondaryMetricValue">…</strong><span id="secondaryMetricLabel">正在计算</span></div>
           </div>
-          <div class="saving-box">
-            <span>预计可节省</span>
-            <strong id="estimatedTime">约 0 分钟</strong>
-          </div>
-          <button id="fillButton" class="primary-button" disabled>填写通用字段</button>
+          <section id="resultCard" class="result-card hidden" aria-live="polite"></section>
+          <button id="fillButton" class="primary-button" disabled>智能填写字段</button>
           <p class="hint">只填写明确匹配的通用信息，不会提交申请。</p>
         </section>
-
-        <section id="resultCard" class="result-card hidden" aria-live="polite"></section>
 
         <section class="fields-section">
           <div class="section-heading">
@@ -45,7 +40,7 @@
     <footer>
       <div class="footer-actions">
         <button id="profileButton">我的档案</button>
-        <button id="disableButton" class="danger-button" title="关闭侧边栏并移除当前页面的悬浮球">关闭页面助手</button>
+        <button id="closePanelButton" title="关闭侧边栏，恢复为悬浮球展示">关闭侧边栏</button>
       </div>
       <div id="totalSaved">累计节省约 0 分钟</div>
     </footer>

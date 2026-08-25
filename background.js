@@ -55,3 +55,18 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     .catch((error) => sendResponse({ ok: false, error: error.message }));
   return true;
 });
+
+chrome.runtime.onConnect.addListener((port) => {
+  if (port.name !== "applyflow-sidepanel") return;
+  let tabId = null;
+  let minimized = false;
+  port.onMessage.addListener((message) => {
+    if (message?.type === "APPLYFLOW_PANEL_TAB" && Number.isInteger(message.tabId)) tabId = message.tabId;
+    if (message?.type === "APPLYFLOW_PANEL_MINIMIZE") minimized = true;
+  });
+  port.onDisconnect.addListener(() => {
+    if (!tabId) return;
+    const type = minimized ? "APPLYFLOW_SHOW_ORB" : "APPLYFLOW_DISABLE";
+    chrome.tabs.sendMessage(tabId, { type }).catch(() => undefined);
+  });
+});
