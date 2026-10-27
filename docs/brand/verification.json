@@ -44,6 +44,14 @@
       "width": 374,
       "height": 756,
       "sha256": "91f7ac7c9b38eebe8c1a83054573d6a898f59b8a98344103dc983aebc2cf80f9"
+    },
+    {
+      "path": "cover.jpg",
+      "format": "JPEG",
+      "width": 820,
+      "height": 538,
+      "sha256": "3b844d8b92a68011b420cfc5675e4507b6a284be056cc4a5a3cd107447237d4e",
+      "use": "860×680实际受控工作台的workspace范围实拍，少量虚构表单字段与助手状态并列；实际填写8项，未提交申请。"
     }
   ],
   "baseCommit": "8f1b052",
@@ -62,5 +70,6 @@
     "sidepanel/sidepanel.js": "b1c4f60161fdbfae454a066c564437a9d40200f7275965110c0616a60ac4ab61",
     "icons/brand.svg": "6eb94d03bbeddce2caadb7a8fe998f114ecb82324832c2d332c0c66b36997d15"
   },
-  "environment": "只读HTTP工作台替代Chrome API；不运行在商店安装扩展中；原产品功能代码未修改以伪造结果。"
+  "environment": "只读HTTP工作台替代Chrome API；不运行在商店安装扩展中；原产品功能代码未修改以伪造结果。",
+  "refinedAt": "2026-10-27"
 }
