@@ -1,0 +1,66 @@
+{
+  "capturedAt": "2026-10-27",
+  "direction": "A：精致轻立体",
+  "kind": "真实产品组件的本地受控演示；Chrome API 由仅内存桥替代，非商店安装证明",
+  "images": [
+    {
+      "path": "after.jpg",
+      "format": "JPEG",
+      "width": 1265,
+      "height": 889,
+      "sha256": "6b60bc41b1eaf51a8417d915b6125ed0fdfb2c8a4b1eeb3af20d320106df6ad6"
+    },
+    {
+      "path": "before-sidebar.jpg",
+      "format": "JPEG",
+      "width": 374,
+      "height": 576,
+      "sha256": "1f55343095b0d58bba485d8876fb5f632ae5d3182e775819bf6372f50f5a0263"
+    },
+    {
+      "path": "before.jpg",
+      "format": "JPEG",
+      "width": 1265,
+      "height": 889,
+      "sha256": "062b5e0dd5dd0eb42ce796dcb1e1cbf612daf9a7f2c70d5c5ea97d7a15204795"
+    },
+    {
+      "path": "review-sidebar.jpg",
+      "format": "JPEG",
+      "width": 374,
+      "height": 576,
+      "sha256": "967e9cb97eab009adae062b2a4c559c38ee89a5284501b72a4aba6ee1d83c195"
+    },
+    {
+      "path": "review.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 900,
+      "sha256": "b7fe9a7edba6e2442ccc8a7e2d24300893129aa43adf251efee23190990e1585"
+    },
+    {
+      "path": "sidebar.jpg",
+      "format": "JPEG",
+      "width": 374,
+      "height": 756,
+      "sha256": "91f7ac7c9b38eebe8c1a83054573d6a898f59b8a98344103dc983aebc2cf80f9"
+    }
+  ],
+  "baseCommit": "8f1b052",
+  "version": "0.7.8",
+  "checks": {
+    "identified": 9,
+    "fillable": 8,
+    "filledDOMFields": 8,
+    "manual": "招聘信息来源保持空白",
+    "savedTime": "1分10秒为算法估算，非效率测量"
+  },
+  "sourceSHA256": {
+    "shared/schema.js": "a8950952457528df306f2d3608a10cd48daa5aa2baa2e9583ab0c71feb25a594",
+    "content/content.js": "1aaa1bf1052cb5565a5eddeff6795e2dbd96a5d12dce24ecb3c64f57c716e1aa",
+    "sidepanel/sidepanel.html": "ea6da7e8cba8bfca1615ed8fa121c2a199ee95ffaaec2530559f13ceb38e342a",
+    "sidepanel/sidepanel.js": "b1c4f60161fdbfae454a066c564437a9d40200f7275965110c0616a60ac4ab61",
+    "icons/brand.svg": "6eb94d03bbeddce2caadb7a8fe998f114ecb82324832c2d332c0c66b36997d15"
+  },
+  "environment": "只读HTTP工作台替代Chrome API；不运行在商店安装扩展中；原产品功能代码未修改以伪造结果。"
+}

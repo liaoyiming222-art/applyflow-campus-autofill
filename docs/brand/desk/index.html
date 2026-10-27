@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ApplyFlow · 真实组件受控演示</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#eff0f7;color:#222338;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif}.desk{max-width:1340px;margin:auto;padding:30px 44px 40px}.toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.identity{display:flex;align-items:center;gap:11px;font-size:20px;font-weight:650}.identity img{width:36px;height:36px;border-radius:10px}.note{font-size:12px;color:#73758a;font-weight:400}.controls{display:flex;gap:8px}.controls button{font:inherit;font-size:12px;border:1px solid #dadce7;border-radius:20px;padding:9px 14px;background:#fff;color:#58596e;cursor:pointer}.workspace{display:grid;grid-template-columns:minmax(450px,1fr) 374px;border:1px solid #dbdce8;box-shadow:0 22px 55px #24234314;border-radius:20px;overflow:hidden;background:white}.panel{border-left:1px solid #e7e7ef;background:#fafafd}.panel-head{height:48px;display:flex;align-items:center;gap:8px;padding:0 18px;font-size:13px;font-weight:600;border-bottom:1px solid #e7e7ef}.panel-head img{width:22px;height:22px}.panel-head span{margin-left:auto;font-size:10px;font-weight:400;color:#9395a2}iframe{display:block;border:0;width:100%;height:740px}.recruitment{height:788px}.foot{margin:14px 4px 0;color:#818396;font-size:11px;line-height:1.6}@media(max-width:950px){.desk{padding:20px}.workspace{grid-template-columns:minmax(360px,1fr) 344px}}@media(max-width:730px){.workspace{grid-template-columns:1fr}.toolbar{align-items:start;gap:16px}.identity{flex-wrap:wrap}.note{width:100%}.controls{flex-wrap:wrap;justify-content:end}.recruitment{height:690px}.panel{border-left:0;border-top:1px solid #e7e7ef}iframe{height:680px}}
+  </style>
+  <style>
+    .workspace{height:calc(100dvh - 142px);min-height:480px;max-height:820px}.recruitment{height:100%}.panel{display:grid;grid-template-rows:48px minmax(0,1fr);min-height:0}iframe{height:100%}@media(max-width:730px){.workspace{height:auto;max-height:none}.recruitment{height:620px}.panel{height:640px}}
+  </style>
+  <script>
+    const profile={basic:{nameZh:'林晨曦',nameEn:'Chenxi Lin',phone:'13800138027',email:'chenxi.lin.test@example.com',gender:'女',currentCity:'上海'},education:[{school:'上海交通大学',major:'计算机科学与技术',level:'硕士研究生',endDate:'2027-06'}],preferences:{recruitmentSource:''}};
+    const memory={profile,usageStats:{filledFields:0,savedSeconds:0}};
+    const events=[];
+    function pageMessage(type){return new Promise((resolve,reject)=>{const page=document.querySelector('#form').contentWindow;if(!page.__applyflowListeners?.length){reject(new Error('Form not ready'));return;}const event={type,at:new Date().toISOString()};events.push(event);let handled=false;for(const fn of page.__applyflowListeners){const result=fn({type},{tab:{id:1}},value=>{event.result=value;resolve(value)});handled ||= Boolean(result)}if(!handled && !['APPLYFLOW_HIDE_ORB','APPLYFLOW_SHOW_ORB'].includes(type))reject(new Error('Unhandled message'));});}
+    function reset(){location.reload()}
+    function review(){document.querySelector('#form').contentWindow.document.querySelector('#recruitmentSource').scrollIntoView({block:'center',behavior:'smooth'});document.querySelector('#panel').contentWindow.document.querySelector('#fieldList').lastElementChild?.scrollIntoView({block:'center',behavior:'smooth'});}
+    window.__materialEvidence={memory,events,pageMessage};
+  </script>
+</head>
+<body>
+  <main class="desk">
+    <header class="toolbar"><div class="identity"><img src="/source/icons/icon-128.png" alt="">ApplyFlow <span class="note">真实组件的受控演示 · 全部档案为虚构测试数据</span></div><div class="controls"><button onclick="reset()">重置演示</button><button onclick="review()">查看待处理项</button></div></header>
+    <section class="workspace" aria-label="招聘测试表单与真实 ApplyFlow 侧栏">
+      <iframe class="recruitment" id="form" src="form.html" title="虚构校园招聘测试表单" onload="document.querySelector('#panel').src='/source/sidepanel/sidepanel.html'"></iframe>
+      <aside class="panel"><div class="panel-head"><img src="/source/icons/icon-128.png" alt="">ApplyFlow<span>0.7.8</span></div><iframe id="panel" title="ApplyFlow 原版侧栏"></iframe></aside>
+    </section>
+    <p class="foot">识别、填写与侧栏均使用产品现有代码。此工作台以本地消息桥替代扩展运行环境；表单为依据项目测试字段制作的虚构场景，不会提交申请。</p>
+  </main>
+</body>
+</html>

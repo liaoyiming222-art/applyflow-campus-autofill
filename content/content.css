@@ -60,3 +60,5 @@
   outline: 2px solid rgba(255, 180, 56, 0.75) !important;
   outline-offset: 2px !important;
 }
+
+#applyflow-root .applyflow-orb > img{display:block!important;width:38px!important;height:38px!important;min-width:38px!important;max-width:38px!important;border:0!important;object-fit:contain!important;pointer-events:none!important}

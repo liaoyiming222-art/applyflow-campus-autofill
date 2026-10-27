@@ -61,3 +61,5 @@ footer button { height: 38px; padding: 0 15px; border: 1px solid var(--line); bo
   footer button { padding-inline: 10px; }
   #totalSaved { display: none; }
 }
+
+.product-identity{display:flex;align-items:center;gap:8px;margin:0 0 14px;font-size:13px;font-weight:650;color:#534c67}.product-identity img{display:block;flex:none}

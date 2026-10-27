@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>虚构校园招聘测试表单</title>
+  <link rel="stylesheet" href="/source/content/content.css">
+  <script src="bridge.js"></script>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#fff;color:#282b40;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif}.brand{height:66px;border-bottom:1px solid #eeedf3;display:flex;align-items:center;justify-content:space-between;padding:0 32px;font-weight:650;font-size:16px}.brand small{font-size:11px;color:#9899a8;font-weight:400}.content{padding:30px 32px 46px}.eyebrow{font-size:11px;color:#8c8e9f;letter-spacing:1px}h1{font-size:25px;margin:10px 0;font-weight:650;letter-spacing:-.5px}.meta{font-size:12px;color:#8a8b9d;margin:0 0 26px}.steps{display:flex;align-items:center;gap:13px;font-size:11px;color:#999baa;border-bottom:1px solid #eeedf3;padding-bottom:20px}.steps span:first-child{color:#6250e7;font-weight:650}.steps i{width:26px;height:1px;background:#dedee8}h2{font-size:14px;margin:24px 0 16px}h2::before{content:'';display:inline-block;width:3px;height:13px;border-radius:2px;background:#7c69ea;margin-right:8px;vertical-align:-1px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}label{display:block;font-size:11px;color:#737589}label em{font-style:normal;color:#a4a5b3;margin-left:3px}input,select,textarea{font:inherit;font-size:13px;color:#373a50;display:block;margin-top:8px;height:41px;padding:0 12px;width:100%;border:1px solid #e0e1e9;border-radius:7px;background:#fff;outline:none;transition:border-color .2s,background .2s}input:focus,select:focus,textarea:focus{border-color:#8b7ce6;box-shadow:0 0 0 2px #6250e714}input::placeholder,textarea::placeholder{color:#b3b4c0}textarea{padding:12px;min-height:80px;resize:vertical}.wide{grid-column:1/-1}.caption{margin:9px 0 0;font-size:10px;line-height:1.6;color:#a2a3b0}.bottom{border-top:1px solid #efeff5;margin-top:25px;padding-top:17px;display:flex;align-items:center;justify-content:space-between}.bottom span{font-size:10px;color:#a2a3b0}.bottom button{font:inherit;font-size:11px;color:#9fa0ad;background:#f1f1f6;border:0;border-radius:7px;padding:10px 16px}.applyflow-filled{border-color:#4cae91!important;background:#f7fcfa!important;box-shadow:0 0 0 1px #4cae9110!important}@media(max-width:500px){.brand{padding:0 22px}.content{padding:24px 22px}.grid{gap:16px 14px}h1{font-size:23px}}
+  </style>
+</head>
+<body>
+  <header class="brand">青禾科技 <small>虚构测试招聘页面</small></header>
+  <main class="content">
+    <div class="eyebrow">2027 CAMPUS RECRUITMENT</div><h1>软件研发工程师</h1><p class="meta">技术研发 · 上海 · 校园招聘</p>
+    <nav class="steps"><span>01 基本资料</span><i></i><span>02 经历与能力</span><i></i><span>03 预览申请</span></nav>
+    <form onsubmit="event.preventDefault()">
+      <section><h2>个人信息</h2><div class="grid">
+        <label>中文姓名<em>*</em><input name="candidateName" placeholder="请输入姓名" autocomplete="off"></label>
+        <label>当前城市<input name="currentCity" placeholder="请输入现居城市" autocomplete="off"></label>
+        <label>手机号码<em>*</em><input name="mobile" placeholder="请输入手机号码" autocomplete="off"></label>
+        <label>电子邮箱<em>*</em><input type="email" name="email" placeholder="请输入电子邮箱" autocomplete="off"></label>
+      </div></section>
+      <section id="educationSection"><h2>教育经历</h2><div class="grid">
+        <label>院校名称<em>*</em><input name="school-1" placeholder="请输入院校名称" autocomplete="off"></label>
+        <label>所学专业<em>*</em><input name="major-1" placeholder="请输入所学专业" autocomplete="off"></label>
+        <label>学历<em>*</em><select name="education-1" aria-label="学历"><option value="">请选择学历</option><option>本科</option><option>硕士研究生</option><option>博士研究生</option></select></label>
+        <label>预计毕业时间<em>*</em><input type="month" name="eduEnd-1"></label>
+      </div></section>
+      <section><h2>补充信息</h2><div class="grid"><label class="wide">招聘信息来源<select id="recruitmentSource" name="recruitmentSource" aria-label="招聘信息来源"><option value="">请选择实际了解渠道</option><option>学校就业平台</option><option>企业官网</option><option>校园宣讲会</option></select></label></div><p class="caption">请根据个人实际情况选择招聘渠道。</p></section>
+      <div class="bottom"><span>演示表单 · 不会发送申请数据</span><button type="submit" disabled>下一步</button></div>
+    </form>
+  </main>
+  <script src="/source/shared/schema.js"></script><script src="/source/content/content.js"></script>
+</body>
+</html>
