@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "productId": "applyflow-campus-autofill",
+  "productName": "ApplyFlow 校招填表助手",
+  "repository": "https://github.com/liaoyiming222-art/applyflow-campus-autofill",
+  "assetBranch": "codex/portfolio-assets-20261102",
+  "createdAt": "2026-11-02",
+  "uiCodeVersion": {
+    "baseCommit": "8f1b0526226cea2a74606e67530f284b2c94dcb7",
+    "version": "0.8.7",
+    "state": "pre-existing uncommitted user working tree; not a released or committed UI version",
+    "sha256": {
+      "manifest.json": "fb6dc29ecc624dc8170b59bc77220520483067a2abef369c8f0a3aed894020bf",
+      "background.js": "4a0c804fe589b4a1b4950a7614bd3ab2778ce6726d97590c6cccd512278efc2a",
+      "shared/schema.js": "c2454a2bfa6729f6fb02c2cd72a9f3c8d0e9b77e539a55adec60e2a2630b562a",
+      "shared/adapters.js": "902f342e03a6ab16bdfccb1e3d0194d54ab3be43961fa56c56635af9525e6459",
+      "content/content.js": "bc3c505082301e8186228aa273e6b32fb1e83b1e1b254115c599b4e37fe3aed5",
+      "content/page-bridge.js": "578f7be052a312efcba5c825387ca9b9ee48432794bad70b1d5f261f78f31b97",
+      "sidepanel/sidepanel.html": "594517e58384529a5b2afaa3b4a16bdc3bfa3ca030430451075c9e8c15630adf",
+      "sidepanel/sidepanel.js": "492c9c651009e3bfe3da1fcfc60f4a07612c21a890b590b68a6962ec0fd79239",
+      "sidepanel/sidepanel.css": "f36dda1a1cfa05f44ea90b26159d6ccf5d6e1aee798cd22fc3b4f7c9fd592387",
+      "profile/profile.html": "94021f24adbd024bb8643c31491728fde0e86144708128c8150321a408e359c7",
+      "profile/profile.js": "9b9d16a610a65d310df23ba1e73cae7dd89cec49366be412de5ecc27b2a7ebae",
+      "profile/profile.css": "068cee8b85f301402fb3391152ae171848b0f423c4c4fcccee96bd49735cf140",
+      "profile/resume-parser.js": "95d55a76e9b4572dc9128485ab21456f4f3b982ca961e5654729a2be0bb8f52d",
+      "profile/profile-export.js": "175a3350d0f819e758ad63f3fa0230293ed953c602db336294f923c5d52d1841",
+      "tests/traditional-ats-fixture.html": "1916c531217cc6bfb0380e978161375a73d5012b88df046a44ca7747e4e95565"
+    },
+    "browser": "156.0.4314.50"
+  },
+  "boundaries": [
+    "MVP，Edge为主、尽量兼容Chrome的桌面扩展；不支持手机安装",
+    "当前截图为原工作区0.8.7未提交版本；素材提交基于远端5949469，不包含这些业务改动；按文件SHA核对实际UI版本",
+    "本地模拟招聘表单、虚构档案；浏览器API由测试内存桥替代，未验证正式安装或真实招聘网站兼容",
+    "真实引擎本例填写8项；时间为产品算法估算，非实测收益；累计统计使用临时内存桥，不代表真实使用数据",
+    "不接AI，不自动提交，不勾选隐私声明，不处理附件/验证码/主观问题",
+    "未演示解析和导出结果；不据此承诺任意简历布局或所有网站兼容"
+  ],
+  "assets": [
+    {
+      "path": "hero.webp",
+      "width": 1920,
+      "height": 1200,
+      "format": "webp",
+      "sha256": "1baea28df9478c046b58e4f700265cb62c171007f49f10859b17db9384823ca2",
+      "alt": "首页展台：少填重复信息，搭配真实填写表单和侧栏局部",
+      "purpose": "首页展台",
+      "source": "HTML/CSS独立排版，使用captures/内实际原始截图；source/render.mjs本地生成，无付费服务"
+    },
+    {
+      "path": "card.webp",
+      "width": 1200,
+      "height": 900,
+      "format": "webp",
+      "sha256": "e970c63087191f40cea93c03af73fb1229bb580120de568cd9e933c87f488c01",
+      "alt": "作品卡片：一份档案复用到网申，右侧为真实侧栏",
+      "purpose": "作品列表卡片",
+      "source": "HTML/CSS独立排版，使用captures/内实际原始截图；source/render.mjs本地生成，无付费服务"
+    },
+    {
+      "path": "mobile.webp",
+      "width": 900,
+      "height": 1200,
+      "format": "webp",
+      "sha256": "3e96b1bf5081545dd3232b61b4b753a1d971654742f7b7bfc4f8ac20d58a4ae1",
+      "alt": "窄屏宣传图：桌面扩展侧栏及明确的手机安装边界",
+      "purpose": "手机端作品集展示，非手机安装",
+      "source": "HTML/CSS独立排版，使用captures/内实际原始截图；source/render.mjs本地生成，无付费服务"
+    },
+    {
+      "path": "detail-01.webp",
+      "width": 1920,
+      "height": 1200,
+      "format": "webp",
+      "sha256": "2e65c7e65675f05fc714d4bd0e68bb9c66442abe1153a1090ef0993ff356b03f",
+      "alt": "功能详情：本地求职档案编辑页及分区维护说明",
+      "purpose": "关键功能详情",
+      "source": "HTML/CSS独立排版，使用captures/内实际原始截图；source/render.mjs本地生成，无付费服务"
+    },
+    {
+      "path": "icon.svg",
+      "width": 256,
+      "height": 256,
+      "format": "svg",
+      "sha256": "eaffec22aab77ef725dc816d3399786c36753ca3676d4260eacefe9cfacde8d3",
+      "alt": "ApplyFlow 正式文档与薄荷色流向矢量图标",
+      "purpose": "可缩放品牌图标",
+      "source": "远端 5949469 正式品牌 icons/brand.svg，原样沿用；PNG由浏览器渲染"
+    },
+    {
+      "path": "icon-512.png",
+      "width": 512,
+      "height": 512,
+      "format": "png",
+      "sha256": "a9ae92855824961367b07e16c374f64873d62c21fd79191b990cd87454ca8919",
+      "alt": "ApplyFlow 正式图标，512像素透明背景",
+      "purpose": "作品图标",
+      "source": "远端 5949469 正式品牌 icons/brand.svg，原样沿用；PNG由浏览器渲染"
+    },
+    {
+      "path": "captures/form.png",
+      "width": 1700,
+      "height": 1560,
+      "format": "png",
+      "sha256": "fb2a6b88470416f842005ff6a5bdb80d116cda91fac8529c43667abcf53b13e6",
+      "alt": "本地模拟招聘表单，虚构档案的真实引擎填写结果",
+      "purpose": "排版用原始界面截图",
+      "source": "source/capture.mjs，Edge headless，deviceScaleFactor=2；浏览器API使用内存桥，填写结果由原引擎实时计算"
+    },
+    {
+      "path": "captures/panel.png",
+      "width": 840,
+      "height": 1440,
+      "format": "png",
+      "sha256": "fceec0f8c10bd5cca1fecf81fa1db76595ac44af49891f7dbb6340f295a54887",
+      "alt": "实际侧栏组件，显示本地模拟表单填写结果",
+      "purpose": "排版用原始界面截图",
+      "source": "source/capture.mjs，Edge headless，deviceScaleFactor=2；浏览器API使用内存桥，填写结果由原引擎实时计算"
+    },
+    {
+      "path": "captures/profile.png",
+      "width": 2560,
+      "height": 1700,
+      "format": "png",
+      "sha256": "4274a9b581f6db2b634381a5b05128cc01f79ddbdcef4a2fead91d8f77c30a02",
+      "alt": "实际档案编辑器，使用虚构档案",
+      "purpose": "排版用原始界面截图",
+      "source": "source/capture.mjs，Edge headless，deviceScaleFactor=2；浏览器API使用内存桥，填写结果由原引擎实时计算"
+    },
+    {
+      "path": "source/qa-preview.png",
+      "width": 1400,
+      "height": 1100,
+      "format": "png",
+      "sha256": "9609afb7f237a7cd60cc2c136fcf8df0761aa60c97f3ae38da4da67fda804d4b",
+      "alt": "桌面与窄屏宣传图缩略预览以及32和40像素图标对比检查",
+      "purpose": "交付质量检查拼图",
+      "source": "source/verify.mjs，本地浏览器实际显示检查"
+    }
+  ]
+}

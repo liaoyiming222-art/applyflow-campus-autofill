@@ -1,5 +1,12 @@
 # ApplyFlow 校招填表助手 MVP
 
+<img src="docs/portfolio-assets/icon.svg" width="80" height="80" alt="ApplyFlow 正式图标">
+
+![ApplyFlow 校招填表助手：复用本地档案，主动填写明确字段](docs/portfolio-assets/hero.webp)
+
+[造物集产品宣传素材、来源与功能边界](docs/portfolio-assets/README.md) · [素材清单与 SHA-256](docs/portfolio-assets/manifest.json)
+
+
 <img src="icons/brand.svg" width="96" height="96" alt="ApplyFlow 正式图标">
 
 2026-10-26品牌更新：保留文档与薄荷色填写流向，精简小尺寸细节，统一浏览器图标、侧栏和档案页的品牌。业务能力与主动填写边界保持不变。
