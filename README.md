@@ -4,6 +4,8 @@
 
 ![ApplyFlow 校招填表助手：复用本地档案，主动填写明确字段](docs/portfolio-assets/hero.webp)
 
+素材界面依据：固定 main 提交 `594946947787a072082f193b0549b9942b05cba3`（0.7.8），受控虚构演示，非商店发布证明。
+
 [造物集产品宣传素材、来源与功能边界](docs/portfolio-assets/README.md) · [素材清单与 SHA-256](docs/portfolio-assets/manifest.json)
 
 

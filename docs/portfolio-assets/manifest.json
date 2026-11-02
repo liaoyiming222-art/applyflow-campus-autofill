@@ -3,36 +3,39 @@
   "productId": "applyflow-campus-autofill",
   "productName": "ApplyFlow 校招填表助手",
   "repository": "https://github.com/liaoyiming222-art/applyflow-campus-autofill",
-  "assetBranch": "codex/portfolio-assets-20261102",
+  "assetBranch": "codex/portfolio-main-evidence-20261102",
   "createdAt": "2026-11-02",
   "uiCodeVersion": {
-    "baseCommit": "8f1b0526226cea2a74606e67530f284b2c94dcb7",
-    "version": "0.8.7",
-    "state": "pre-existing uncommitted user working tree; not a released or committed UI version",
+    "repository": "https://github.com/liaoyiming222-art/applyflow-campus-autofill",
+    "codeCommit": "594946947787a072082f193b0549b9942b05cba3",
+    "codeUrl": "https://github.com/liaoyiming222-art/applyflow-campus-autofill/tree/594946947787a072082f193b0549b9942b05cba3",
+    "version": "0.7.8",
+    "state": "Published main source, clean runtime files verified against Git objects; controlled synthetic demo, not store release",
+    "hashConvention": "SHA-256 of committed Git blob bytes (LF), not platform checkout CRLF",
     "sha256": {
-      "manifest.json": "fb6dc29ecc624dc8170b59bc77220520483067a2abef369c8f0a3aed894020bf",
-      "background.js": "4a0c804fe589b4a1b4950a7614bd3ab2778ce6726d97590c6cccd512278efc2a",
-      "shared/schema.js": "c2454a2bfa6729f6fb02c2cd72a9f3c8d0e9b77e539a55adec60e2a2630b562a",
-      "shared/adapters.js": "902f342e03a6ab16bdfccb1e3d0194d54ab3be43961fa56c56635af9525e6459",
-      "content/content.js": "bc3c505082301e8186228aa273e6b32fb1e83b1e1b254115c599b4e37fe3aed5",
-      "content/page-bridge.js": "578f7be052a312efcba5c825387ca9b9ee48432794bad70b1d5f261f78f31b97",
-      "sidepanel/sidepanel.html": "594517e58384529a5b2afaa3b4a16bdc3bfa3ca030430451075c9e8c15630adf",
+      "manifest.json": "b1e9dd84e917377d69fa835d8e7593ea09aea55cc53aadfefc695d4567f50a2b",
+      "tools/brand-preview.mjs": "c4466ef27fba10e2cb28c966cefbcfcfab24cf86faf6fbaae6f2c70c337ce970",
+      "docs/brand/desk/index.html": "26effb480477a5c1f1d7f0c806d3b1a00712b1eb66814a3f17cb56eea5bb7653",
+      "docs/brand/desk/form.html": "7d878b01689d8aa40f50dab4321e3685c4b7be9ca9290467c361799a065a0bef",
+      "docs/brand/desk/bridge.js": "16ad3d525c3de4373760de9e915b13d668a0f5eadc8a514b5f7c91583e06d0dc",
+      "shared/schema.js": "4d29d8e73e89b9be4c7ba1628fb509727dbe4ce1f86ecd6700f3d5fe17d3708a",
+      "content/content.js": "1aaa1bf1052cb5565a5eddeff6795e2dbd96a5d12dce24ecb3c64f57c716e1aa",
+      "content/content.css": "33d8a86459690a593e0d4436ce9b237f1700d1db4c95d39f5026f086d8f456c4",
+      "sidepanel/sidepanel.html": "ea6da7e8cba8bfca1615ed8fa121c2a199ee95ffaaec2530559f13ceb38e342a",
       "sidepanel/sidepanel.js": "492c9c651009e3bfe3da1fcfc60f4a07612c21a890b590b68a6962ec0fd79239",
-      "sidepanel/sidepanel.css": "f36dda1a1cfa05f44ea90b26159d6ccf5d6e1aee798cd22fc3b4f7c9fd592387",
-      "profile/profile.html": "94021f24adbd024bb8643c31491728fde0e86144708128c8150321a408e359c7",
-      "profile/profile.js": "9b9d16a610a65d310df23ba1e73cae7dd89cec49366be412de5ecc27b2a7ebae",
-      "profile/profile.css": "068cee8b85f301402fb3391152ae171848b0f423c4c4fcccee96bd49735cf140",
-      "profile/resume-parser.js": "95d55a76e9b4572dc9128485ab21456f4f3b982ca961e5654729a2be0bb8f52d",
-      "profile/profile-export.js": "175a3350d0f819e758ad63f3fa0230293ed953c602db336294f923c5d52d1841",
-      "tests/traditional-ats-fixture.html": "1916c531217cc6bfb0380e978161375a73d5012b88df046a44ca7747e4e95565"
+      "sidepanel/sidepanel.css": "cb6fe502c04cf8cfb265e7395c28107139636c2db1666fb803da3dfa5916b505",
+      "profile/profile.html": "915db560aa014b2d93d8fc3625d5057e57a8adea4b74182fd12cd3ec3dc8872f",
+      "profile/profile.js": "c04706a4d939a3621972171118362875e6da5acb18a449271bdc55b63f156ef7",
+      "profile/profile.css": "0fb0c4c16606a649ec5780bc407d6a7e002a85b11499b0389ea79769badfa0bc",
+      "profile/resume-parser.js": "fe559db739c03160edeb113e54fad355fc7ab79b45e619d2b9abdb6b12258f55"
     },
     "browser": "156.0.4314.50"
   },
   "boundaries": [
     "MVP，Edge为主、尽量兼容Chrome的桌面扩展；不支持手机安装",
-    "当前截图为原工作区0.8.7未提交版本；素材提交基于远端5949469，不包含这些业务改动；按文件SHA核对实际UI版本",
-    "本地模拟招聘表单、虚构档案；浏览器API由测试内存桥替代，未验证正式安装或真实招聘网站兼容",
-    "真实引擎本例填写8项；时间为产品算法估算，非实测收益；累计统计使用临时内存桥，不代表真实使用数据",
+    "当前截图运行固定main提交594946947787a072082f193b0549b9942b05cba3的0.7.8代码；脚本先比对运行文件与Git提交，非商店已发布证明",
+    "使用同一固定main提交中的docs/brand/desk受控演示与虚构档案；浏览器API使用内存桥，未验证正式安装或真实招聘网站兼容",
+    "真实引擎本例填写8项；时间为产品算法估算，非实测收益；累计统计仅来自当前临时内存桥，不代表真实使用历史",
     "不接AI，不自动提交，不勾选隐私声明，不处理附件/验证码/主观问题",
     "未演示解析和导出结果；不据此承诺任意简历布局或所有网站兼容"
   ],
@@ -42,7 +45,7 @@
       "width": 1920,
       "height": 1200,
       "format": "webp",
-      "sha256": "1baea28df9478c046b58e4f700265cb62c171007f49f10859b17db9384823ca2",
+      "sha256": "cf719c2d7b37341b9760b4893098189ee882a4e6f9ad3efc371793570b058a20",
       "alt": "首页展台：少填重复信息，搭配真实填写表单和侧栏局部",
       "purpose": "首页展台",
       "source": "HTML/CSS独立排版，使用captures/内实际原始截图；source/render.mjs本地生成，无付费服务"
@@ -52,7 +55,7 @@
       "width": 1200,
       "height": 900,
       "format": "webp",
-      "sha256": "e970c63087191f40cea93c03af73fb1229bb580120de568cd9e933c87f488c01",
+      "sha256": "743e16be9ff4b95f2fc9269e13a98f72ace3796d0a3ea60a94dbda70088a2407",
       "alt": "作品卡片：一份档案复用到网申，右侧为真实侧栏",
       "purpose": "作品列表卡片",
       "source": "HTML/CSS独立排版，使用captures/内实际原始截图；source/render.mjs本地生成，无付费服务"
@@ -62,7 +65,7 @@
       "width": 900,
       "height": 1200,
       "format": "webp",
-      "sha256": "3e96b1bf5081545dd3232b61b4b753a1d971654742f7b7bfc4f8ac20d58a4ae1",
+      "sha256": "c38317fa26fce4ebe0f8539e5f5087f370a762d6a93b8706f11a0f2aeaec0c89",
       "alt": "窄屏宣传图：桌面扩展侧栏及明确的手机安装边界",
       "purpose": "手机端作品集展示，非手机安装",
       "source": "HTML/CSS独立排版，使用captures/内实际原始截图；source/render.mjs本地生成，无付费服务"
@@ -72,7 +75,7 @@
       "width": 1920,
       "height": 1200,
       "format": "webp",
-      "sha256": "2e65c7e65675f05fc714d4bd0e68bb9c66442abe1153a1090ef0993ff356b03f",
+      "sha256": "dc85671f654d53157a34cde8b8b5c36882a4036f973dfdba87e63630d74b44df",
       "alt": "功能详情：本地求职档案编辑页及分区维护说明",
       "purpose": "关键功能详情",
       "source": "HTML/CSS独立排版，使用captures/内实际原始截图；source/render.mjs本地生成，无付费服务"
@@ -99,43 +102,43 @@
     },
     {
       "path": "captures/form.png",
-      "width": 1700,
-      "height": 1560,
+      "width": 1752,
+      "height": 1636,
       "format": "png",
-      "sha256": "fb2a6b88470416f842005ff6a5bdb80d116cda91fac8529c43667abcf53b13e6",
+      "sha256": "e0edf69c254361fa4803434fa788feafe22bd6bbcb1b5b4be593340845c5526b",
       "alt": "本地模拟招聘表单，虚构档案的真实引擎填写结果",
       "purpose": "排版用原始界面截图",
-      "source": "source/capture.mjs，Edge headless，deviceScaleFactor=2；浏览器API使用内存桥，填写结果由原引擎实时计算"
+      "source": "source/capture.mjs；固定main 5949469受控演示；Edge headless，deviceScaleFactor=2；内存桥，真实引擎计算"
     },
     {
       "path": "captures/panel.png",
-      "width": 840,
-      "height": 1440,
+      "width": 746,
+      "height": 1540,
       "format": "png",
-      "sha256": "fceec0f8c10bd5cca1fecf81fa1db76595ac44af49891f7dbb6340f295a54887",
+      "sha256": "388bb477e770995adb6ee90d2a18763615c07bdb220f9391969cb89a78a29e4c",
       "alt": "实际侧栏组件，显示本地模拟表单填写结果",
       "purpose": "排版用原始界面截图",
-      "source": "source/capture.mjs，Edge headless，deviceScaleFactor=2；浏览器API使用内存桥，填写结果由原引擎实时计算"
+      "source": "source/capture.mjs；固定main 5949469受控演示；Edge headless，deviceScaleFactor=2；内存桥，真实引擎计算"
     },
     {
       "path": "captures/profile.png",
       "width": 2560,
       "height": 1700,
       "format": "png",
-      "sha256": "4274a9b581f6db2b634381a5b05128cc01f79ddbdcef4a2fead91d8f77c30a02",
+      "sha256": "9fa754273586f0c3c585ab964c93c10df06dca9a5c1c3052ed135bc5f83f556e",
       "alt": "实际档案编辑器，使用虚构档案",
       "purpose": "排版用原始界面截图",
-      "source": "source/capture.mjs，Edge headless，deviceScaleFactor=2；浏览器API使用内存桥，填写结果由原引擎实时计算"
+      "source": "source/capture.mjs；固定main 5949469受控演示；Edge headless，deviceScaleFactor=2；内存桥，真实引擎计算"
     },
     {
       "path": "source/qa-preview.png",
       "width": 1400,
       "height": 1100,
       "format": "png",
-      "sha256": "9609afb7f237a7cd60cc2c136fcf8df0761aa60c97f3ae38da4da67fda804d4b",
-      "alt": "桌面与窄屏宣传图缩略预览以及32和40像素图标对比检查",
-      "purpose": "交付质量检查拼图",
-      "source": "source/verify.mjs，本地浏览器实际显示检查"
+      "sha256": "2c392f727f00f7d51ffbb96ebf3071847499133f45f4266f7339c00f51fbc01d",
+      "alt": "修正版桌面和窄屏宣传图以及32和40像素图标检查",
+      "purpose": "质量检查拼图",
+      "source": "source/verify.mjs"
     }
   ]
 }
