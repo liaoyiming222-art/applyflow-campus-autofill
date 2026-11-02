@@ -1,161 +1,348 @@
 {
-  "scan": {
-    "entries": [
+  "events": [
+    {
+      "type": "APPLYFLOW_HIDE_ORB",
+      "at": "2026-11-02T05:32:54.909Z",
+      "result": {
+        "ok": true
+      }
+    },
+    {
+      "type": "APPLYFLOW_SCAN",
+      "at": "2026-11-02T05:32:54.909Z",
+      "result": {
+        "entries": [
+          {
+            "id": "af-0-1793597574910",
+            "label": "中文姓名*",
+            "fieldKey": "basic.nameZh",
+            "controlType": "text",
+            "valuePreview": "林晨曦",
+            "canFill": true,
+            "unsupported": false,
+            "occurrence": 0,
+            "controlSlot": ""
+          },
+          {
+            "id": "af-1-1793597574910",
+            "label": "当前城市",
+            "fieldKey": "basic.currentCity",
+            "controlType": "text",
+            "valuePreview": "上海",
+            "canFill": true,
+            "unsupported": false,
+            "occurrence": 0,
+            "controlSlot": ""
+          },
+          {
+            "id": "af-2-1793597574911",
+            "label": "手机号码*",
+            "fieldKey": "basic.phone",
+            "controlType": "text",
+            "valuePreview": "138****8027",
+            "canFill": true,
+            "unsupported": false,
+            "occurrence": 0,
+            "controlSlot": ""
+          },
+          {
+            "id": "af-3-1793597574911",
+            "label": "电子邮箱*",
+            "fieldKey": "basic.email",
+            "controlType": "text",
+            "valuePreview": "ch***@example.com",
+            "canFill": true,
+            "unsupported": false,
+            "occurrence": 0,
+            "controlSlot": ""
+          },
+          {
+            "id": "af-4-1793597574911",
+            "label": "院校名称*",
+            "fieldKey": "education.school",
+            "controlType": "text",
+            "valuePreview": "上海交通大学",
+            "canFill": true,
+            "unsupported": false,
+            "occurrence": 0,
+            "controlSlot": ""
+          },
+          {
+            "id": "af-5-1793597574912",
+            "label": "所学专业*",
+            "fieldKey": "education.major",
+            "controlType": "text",
+            "valuePreview": "计算机科学与技术",
+            "canFill": true,
+            "unsupported": false,
+            "occurrence": 0,
+            "controlSlot": ""
+          },
+          {
+            "id": "af-6-1793597574912",
+            "label": "学历",
+            "fieldKey": "education.level",
+            "controlType": "select",
+            "valuePreview": "硕士研究生",
+            "canFill": true,
+            "unsupported": false,
+            "occurrence": 0,
+            "controlSlot": ""
+          },
+          {
+            "id": "af-7-1793597574912",
+            "label": "预计毕业时间*",
+            "fieldKey": "education.endDate",
+            "controlType": "date",
+            "valuePreview": "2027-06",
+            "canFill": true,
+            "unsupported": false,
+            "occurrence": 0,
+            "controlSlot": ""
+          },
+          {
+            "id": "af-8-1793597574913",
+            "label": "招聘信息来源",
+            "fieldKey": "preferences.recruitmentSource",
+            "controlType": "select",
+            "valuePreview": "",
+            "canFill": false,
+            "unsupported": false,
+            "occurrence": 0,
+            "controlSlot": ""
+          }
+        ],
+        "fillableCount": 8,
+        "missingCount": 1,
+        "manualCount": 0,
+        "detectedControlCount": 9,
+        "matchedFieldCount": 9,
+        "unmatchedControlCount": 0,
+        "recognizedControlCount": 9,
+        "estimatedManualSeconds": 95
+      }
+    },
+    {
+      "type": "APPLYFLOW_HIDE_ORB",
+      "at": "2026-11-02T05:32:55.122Z",
+      "result": {
+        "ok": true
+      }
+    },
+    {
+      "type": "APPLYFLOW_SCAN",
+      "at": "2026-11-02T05:32:55.122Z",
+      "result": {
+        "entries": [
+          {
+            "id": "af-0-1793597575122",
+            "label": "中文姓名*",
+            "fieldKey": "basic.nameZh",
+            "controlType": "text",
+            "valuePreview": "示例同学",
+            "canFill": true,
+            "unsupported": false,
+            "occurrence": 0,
+            "controlSlot": ""
+          },
+          {
+            "id": "af-1-1793597575123",
+            "label": "当前城市",
+            "fieldKey": "basic.currentCity",
+            "controlType": "text",
+            "valuePreview": "上海",
+            "canFill": true,
+            "unsupported": false,
+            "occurrence": 0,
+            "controlSlot": ""
+          },
+          {
+            "id": "af-2-1793597575123",
+            "label": "手机号码*",
+            "fieldKey": "basic.phone",
+            "controlType": "text",
+            "valuePreview": "00000000000",
+            "canFill": true,
+            "unsupported": false,
+            "occurrence": 0,
+            "controlSlot": ""
+          },
+          {
+            "id": "af-3-1793597575124",
+            "label": "电子邮箱*",
+            "fieldKey": "basic.email",
+            "controlType": "text",
+            "valuePreview": "de***@example.invalid",
+            "canFill": true,
+            "unsupported": false,
+            "occurrence": 0,
+            "controlSlot": ""
+          },
+          {
+            "id": "af-4-1793597575124",
+            "label": "院校名称*",
+            "fieldKey": "education.school",
+            "controlType": "text",
+            "valuePreview": "示例大学",
+            "canFill": true,
+            "unsupported": false,
+            "occurrence": 0,
+            "controlSlot": ""
+          },
+          {
+            "id": "af-5-1793597575124",
+            "label": "所学专业*",
+            "fieldKey": "education.major",
+            "controlType": "text",
+            "valuePreview": "计算机科学与技术",
+            "canFill": true,
+            "unsupported": false,
+            "occurrence": 0,
+            "controlSlot": ""
+          },
+          {
+            "id": "af-6-1793597575124",
+            "label": "学历",
+            "fieldKey": "education.level",
+            "controlType": "select",
+            "valuePreview": "硕士研究生",
+            "canFill": true,
+            "unsupported": false,
+            "occurrence": 0,
+            "controlSlot": ""
+          },
+          {
+            "id": "af-7-1793597575124",
+            "label": "预计毕业时间*",
+            "fieldKey": "education.endDate",
+            "controlType": "date",
+            "valuePreview": "2027-06",
+            "canFill": true,
+            "unsupported": false,
+            "occurrence": 0,
+            "controlSlot": ""
+          },
+          {
+            "id": "af-8-1793597575124",
+            "label": "招聘信息来源",
+            "fieldKey": "preferences.recruitmentSource",
+            "controlType": "select",
+            "valuePreview": "",
+            "canFill": false,
+            "unsupported": false,
+            "occurrence": 0,
+            "controlSlot": ""
+          }
+        ],
+        "fillableCount": 8,
+        "missingCount": 1,
+        "manualCount": 0,
+        "detectedControlCount": 9,
+        "matchedFieldCount": 9,
+        "unmatchedControlCount": 0,
+        "recognizedControlCount": 9,
+        "estimatedManualSeconds": 95
+      }
+    },
+    {
+      "type": "APPLYFLOW_FILL",
+      "at": "2026-11-02T05:32:56.373Z",
+      "result": {
+        "filledCount": 8,
+        "failedCount": 0,
+        "filledLabels": [
+          "中文姓名*",
+          "当前城市",
+          "手机号码*",
+          "电子邮箱*",
+          "院校名称*",
+          "所学专业*",
+          "学历",
+          "预计毕业时间*"
+        ],
+        "failedLabels": [],
+        "failedDetails": [],
+        "savedSeconds": 70,
+        "usageStats": {
+          "filledFields": 8,
+          "savedSeconds": 70
+        },
+        "repeatable": {
+          "added": {
+            "education": 0,
+            "experience": 0,
+            "work": 0,
+            "projects": 0,
+            "languages": 0,
+            "awards": 0
+          },
+          "failed": []
+        }
+      }
+    }
+  ],
+  "profile": {
+    "basic": {
+      "nameZh": "示例同学",
+      "nameEn": "Chenxi Lin",
+      "phone": "00000000000",
+      "email": "demo@example.invalid",
+      "gender": "女",
+      "currentCity": "上海"
+    },
+    "education": [
       {
-        "id": "af-0-1793585323079",
-        "label": "中文姓名",
-        "fieldKey": "basic.nameZh",
-        "controlType": "text",
-        "adapterId": "native-text",
-        "valuePreview": "示例同学",
-        "canFill": true,
-        "unsupported": false,
-        "confidence": "exact",
-        "occurrence": 0,
-        "controlSlot": ""
-      },
-      {
-        "id": "af-1-1793585323079",
-        "label": "联系电话",
-        "fieldKey": "basic.phone",
-        "controlType": "text",
-        "adapterId": "native-text",
-        "valuePreview": "00000000000",
-        "canFill": true,
-        "unsupported": false,
-        "confidence": "exact",
-        "occurrence": 0,
-        "controlSlot": ""
-      },
-      {
-        "id": "af-2-1793585323079",
-        "label": "出生日期",
-        "fieldKey": "basic.birthDate",
-        "controlType": "date",
-        "adapterId": "native-date",
-        "valuePreview": "2003-08-16",
-        "canFill": true,
-        "unsupported": false,
-        "confidence": "exact",
-        "occurrence": 0,
-        "controlSlot": ""
-      },
-      {
-        "id": "af-3-1793585323079",
-        "label": "gender",
-        "fieldKey": "basic.gender",
-        "controlType": "radio",
-        "adapterId": "native-radio",
-        "valuePreview": "女",
-        "canFill": true,
-        "unsupported": false,
-        "confidence": "exact",
-        "occurrence": 0,
-        "controlSlot": ""
-      },
-      {
-        "id": "af-4-1793585323080",
-        "label": "政治面貌",
-        "fieldKey": "basic.politicalStatus",
-        "controlType": "select",
-        "adapterId": "native-select",
-        "valuePreview": "共青团员",
-        "canFill": true,
-        "unsupported": false,
-        "confidence": "exact",
-        "occurrence": 0,
-        "controlSlot": ""
-      },
-      {
-        "id": "af-5-1793585323080",
-        "label": "毕业院校",
-        "fieldKey": "education.school",
-        "controlType": "text",
-        "adapterId": "native-text",
-        "valuePreview": "示例大学",
-        "canFill": true,
-        "unsupported": false,
-        "confidence": "exact",
-        "occurrence": 0,
-        "controlSlot": ""
-      },
-      {
-        "id": "af-6-1793585323080",
-        "label": "所学专业",
-        "fieldKey": "education.major",
-        "controlType": "text",
-        "adapterId": "native-text",
-        "valuePreview": "计算机科学与技术",
-        "canFill": true,
-        "unsupported": false,
-        "confidence": "exact",
-        "occurrence": 0,
-        "controlSlot": ""
-      },
-      {
-        "id": "af-7-1793585323080",
-        "label": "学位",
-        "fieldKey": "education.degree",
-        "controlType": "select",
-        "adapterId": "native-select",
-        "valuePreview": "工学硕士",
-        "canFill": true,
-        "unsupported": false,
-        "confidence": "exact",
-        "occurrence": 0,
-        "controlSlot": ""
+        "school": "示例大学",
+        "major": "计算机科学与技术",
+        "level": "硕士研究生",
+        "endDate": "2027-06"
       }
     ],
-    "fillableCount": 8,
-    "missingCount": 0,
-    "manualCount": 0,
-    "manualDetails": [],
-    "detectedControlCount": 9,
-    "matchedFieldCount": 8,
-    "unmatchedControlCount": 0,
-    "recognizedControlCount": 8,
-    "estimatedManualSeconds": 105
-  },
-  "fill": {
-    "filledCount": 8,
-    "failedCount": 0,
-    "filledLabels": [
-      "中文姓名",
-      "联系电话",
-      "出生日期",
-      "gender",
-      "政治面貌",
-      "毕业院校",
-      "所学专业",
-      "学位"
-    ],
-    "failedLabels": [],
-    "failedDetails": [],
-    "skippedDetails": [],
-    "savedSeconds": 80,
-    "usageStats": {
-      "filledFields": 8,
-      "savedSeconds": 80
-    },
-    "repeatable": {
-      "added": {
-        "education": 0,
-        "experience": 0,
-        "work": 0,
-        "projects": 0,
-        "languages": 0,
-        "awards": 0
-      },
-      "failed": []
+    "preferences": {
+      "recruitmentSource": ""
     }
   },
-  "name": "示例同学",
-  "phone": "00000000000",
-  "birth": "2003-08-16",
-  "gender": "女",
-  "political": "共青团员",
-  "school": "示例大学",
-  "major": "计算机科学与技术",
-  "degree": "工学硕士",
-  "privacy": false
+  "stats": {
+    "filledFields": 8,
+    "savedSeconds": 70
+  },
+  "values": [
+    {
+      "name": "candidateName",
+      "value": "示例同学"
+    },
+    {
+      "name": "currentCity",
+      "value": "上海"
+    },
+    {
+      "name": "mobile",
+      "value": "00000000000"
+    },
+    {
+      "name": "email",
+      "value": "demo@example.invalid"
+    },
+    {
+      "name": "school-1",
+      "value": "示例大学"
+    },
+    {
+      "name": "major-1",
+      "value": "计算机科学与技术"
+    },
+    {
+      "name": "education-1",
+      "value": "硕士研究生"
+    },
+    {
+      "name": "eduEnd-1",
+      "value": "2027-06"
+    },
+    {
+      "name": "recruitmentSource",
+      "value": ""
+    }
+  ],
+  "submitDisabled": true
 }
