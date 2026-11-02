@@ -1,0 +1,23 @@
+{
+  "baseCommit": "8f1b0526226cea2a74606e67530f284b2c94dcb7",
+  "version": "0.8.7",
+  "state": "pre-existing uncommitted user working tree; not a released or committed UI version",
+  "sha256": {
+    "manifest.json": "fb6dc29ecc624dc8170b59bc77220520483067a2abef369c8f0a3aed894020bf",
+    "background.js": "4a0c804fe589b4a1b4950a7614bd3ab2778ce6726d97590c6cccd512278efc2a",
+    "shared/schema.js": "c2454a2bfa6729f6fb02c2cd72a9f3c8d0e9b77e539a55adec60e2a2630b562a",
+    "shared/adapters.js": "902f342e03a6ab16bdfccb1e3d0194d54ab3be43961fa56c56635af9525e6459",
+    "content/content.js": "bc3c505082301e8186228aa273e6b32fb1e83b1e1b254115c599b4e37fe3aed5",
+    "content/page-bridge.js": "578f7be052a312efcba5c825387ca9b9ee48432794bad70b1d5f261f78f31b97",
+    "sidepanel/sidepanel.html": "594517e58384529a5b2afaa3b4a16bdc3bfa3ca030430451075c9e8c15630adf",
+    "sidepanel/sidepanel.js": "492c9c651009e3bfe3da1fcfc60f4a07612c21a890b590b68a6962ec0fd79239",
+    "sidepanel/sidepanel.css": "f36dda1a1cfa05f44ea90b26159d6ccf5d6e1aee798cd22fc3b4f7c9fd592387",
+    "profile/profile.html": "94021f24adbd024bb8643c31491728fde0e86144708128c8150321a408e359c7",
+    "profile/profile.js": "9b9d16a610a65d310df23ba1e73cae7dd89cec49366be412de5ecc27b2a7ebae",
+    "profile/profile.css": "068cee8b85f301402fb3391152ae171848b0f423c4c4fcccee96bd49735cf140",
+    "profile/resume-parser.js": "95d55a76e9b4572dc9128485ab21456f4f3b982ca961e5654729a2be0bb8f52d",
+    "profile/profile-export.js": "175a3350d0f819e758ad63f3fa0230293ed953c602db336294f923c5d52d1841",
+    "tests/traditional-ats-fixture.html": "1916c531217cc6bfb0380e978161375a73d5012b88df046a44ca7747e4e95565"
+  },
+  "browser": "156.0.4314.50"
+}

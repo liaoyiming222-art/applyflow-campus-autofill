@@ -1,0 +1,161 @@
+{
+  "scan": {
+    "entries": [
+      {
+        "id": "af-0-1793585323079",
+        "label": "中文姓名",
+        "fieldKey": "basic.nameZh",
+        "controlType": "text",
+        "adapterId": "native-text",
+        "valuePreview": "示例同学",
+        "canFill": true,
+        "unsupported": false,
+        "confidence": "exact",
+        "occurrence": 0,
+        "controlSlot": ""
+      },
+      {
+        "id": "af-1-1793585323079",
+        "label": "联系电话",
+        "fieldKey": "basic.phone",
+        "controlType": "text",
+        "adapterId": "native-text",
+        "valuePreview": "00000000000",
+        "canFill": true,
+        "unsupported": false,
+        "confidence": "exact",
+        "occurrence": 0,
+        "controlSlot": ""
+      },
+      {
+        "id": "af-2-1793585323079",
+        "label": "出生日期",
+        "fieldKey": "basic.birthDate",
+        "controlType": "date",
+        "adapterId": "native-date",
+        "valuePreview": "2003-08-16",
+        "canFill": true,
+        "unsupported": false,
+        "confidence": "exact",
+        "occurrence": 0,
+        "controlSlot": ""
+      },
+      {
+        "id": "af-3-1793585323079",
+        "label": "gender",
+        "fieldKey": "basic.gender",
+        "controlType": "radio",
+        "adapterId": "native-radio",
+        "valuePreview": "女",
+        "canFill": true,
+        "unsupported": false,
+        "confidence": "exact",
+        "occurrence": 0,
+        "controlSlot": ""
+      },
+      {
+        "id": "af-4-1793585323080",
+        "label": "政治面貌",
+        "fieldKey": "basic.politicalStatus",
+        "controlType": "select",
+        "adapterId": "native-select",
+        "valuePreview": "共青团员",
+        "canFill": true,
+        "unsupported": false,
+        "confidence": "exact",
+        "occurrence": 0,
+        "controlSlot": ""
+      },
+      {
+        "id": "af-5-1793585323080",
+        "label": "毕业院校",
+        "fieldKey": "education.school",
+        "controlType": "text",
+        "adapterId": "native-text",
+        "valuePreview": "示例大学",
+        "canFill": true,
+        "unsupported": false,
+        "confidence": "exact",
+        "occurrence": 0,
+        "controlSlot": ""
+      },
+      {
+        "id": "af-6-1793585323080",
+        "label": "所学专业",
+        "fieldKey": "education.major",
+        "controlType": "text",
+        "adapterId": "native-text",
+        "valuePreview": "计算机科学与技术",
+        "canFill": true,
+        "unsupported": false,
+        "confidence": "exact",
+        "occurrence": 0,
+        "controlSlot": ""
+      },
+      {
+        "id": "af-7-1793585323080",
+        "label": "学位",
+        "fieldKey": "education.degree",
+        "controlType": "select",
+        "adapterId": "native-select",
+        "valuePreview": "工学硕士",
+        "canFill": true,
+        "unsupported": false,
+        "confidence": "exact",
+        "occurrence": 0,
+        "controlSlot": ""
+      }
+    ],
+    "fillableCount": 8,
+    "missingCount": 0,
+    "manualCount": 0,
+    "manualDetails": [],
+    "detectedControlCount": 9,
+    "matchedFieldCount": 8,
+    "unmatchedControlCount": 0,
+    "recognizedControlCount": 8,
+    "estimatedManualSeconds": 105
+  },
+  "fill": {
+    "filledCount": 8,
+    "failedCount": 0,
+    "filledLabels": [
+      "中文姓名",
+      "联系电话",
+      "出生日期",
+      "gender",
+      "政治面貌",
+      "毕业院校",
+      "所学专业",
+      "学位"
+    ],
+    "failedLabels": [],
+    "failedDetails": [],
+    "skippedDetails": [],
+    "savedSeconds": 80,
+    "usageStats": {
+      "filledFields": 8,
+      "savedSeconds": 80
+    },
+    "repeatable": {
+      "added": {
+        "education": 0,
+        "experience": 0,
+        "work": 0,
+        "projects": 0,
+        "languages": 0,
+        "awards": 0
+      },
+      "failed": []
+    }
+  },
+  "name": "示例同学",
+  "phone": "00000000000",
+  "birth": "2003-08-16",
+  "gender": "女",
+  "political": "共青团员",
+  "school": "示例大学",
+  "major": "计算机科学与技术",
+  "degree": "工学硕士",
+  "privacy": false
+}
