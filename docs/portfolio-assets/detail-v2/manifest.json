@@ -1,0 +1,182 @@
+{
+  "taskId": "detail-v2-20261104-applyflow",
+  "productId": "applyflow",
+  "repository": "https://github.com/liaoyiming222-art/applyflow-campus-autofill",
+  "branch": "codex/detail-v2-20261104",
+  "codeCommit": "594946947787a072082f193b0549b9942b05cba3",
+  "version": "0.7.8",
+  "workspace": "isolated clean runtime; original dirty 0.8.7 untouched",
+  "assets": [
+    {
+      "path": "applyflow-detail-overview-desktop.webp",
+      "width": 1920,
+      "height": 1200,
+      "format": "webp",
+      "sha256": "bd5e187f1e2ea65f4227a17485023e2e57131dc5da1f8475eb73752e96bf0144",
+      "alt": "待填表单与识别后显示沈予安、杭州档案值的真实侧栏并列",
+      "scene": "overview / scan",
+      "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
+      "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
+    },
+    {
+      "path": "applyflow-detail-overview-form-mobile.webp",
+      "width": 900,
+      "height": 600,
+      "format": "webp",
+      "sha256": "5a92ac16e769bb76608ccb6cb903041ef53e7f38f22f3aee757ca6562df9e01b",
+      "alt": "受控表单姓名和城市字段，尚未写入",
+      "scene": "same overview / form",
+      "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
+      "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
+    },
+    {
+      "path": "applyflow-detail-overview-sidebar-mobile.webp",
+      "width": 900,
+      "height": 1200,
+      "format": "webp",
+      "sha256": "5db26253501d1ec368a93a286de13f3c8e1ba5de3755aa21ada8796f6eec830d",
+      "alt": "同状态侧栏对应姓名、城市档案值及主动填写操作",
+      "scene": "same overview / sidebar",
+      "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
+      "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
+    },
+    {
+      "path": "applyflow-detail-scan-desktop.webp",
+      "width": 1600,
+      "height": 1200,
+      "format": "webp",
+      "sha256": "113d5dea7a4e7d775c431db76efab3c98d761834a51fe0f443b6490ad642d631",
+      "alt": "识别完成但尚未填写，姓名和城市字段空白且侧栏显示对应值",
+      "scene": "scan",
+      "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
+      "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
+    },
+    {
+      "path": "applyflow-detail-scan-form-mobile.webp",
+      "width": 900,
+      "height": 600,
+      "format": "webp",
+      "sha256": "6aee3f2a11de25dd3bb92198c8ac63afde149eafcb7a02285fbd558749746aa8",
+      "alt": "受控表单姓名和城市字段，尚未写入",
+      "scene": "same scan / form",
+      "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
+      "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
+    },
+    {
+      "path": "applyflow-detail-scan-sidebar-mobile.webp",
+      "width": 900,
+      "height": 1200,
+      "format": "webp",
+      "sha256": "5db26253501d1ec368a93a286de13f3c8e1ba5de3755aa21ada8796f6eec830d",
+      "alt": "同状态侧栏对应姓名、城市档案值及主动填写操作",
+      "scene": "same scan / sidebar",
+      "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
+      "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
+    },
+    {
+      "path": "applyflow-detail-filled-desktop.webp",
+      "width": 1600,
+      "height": 1200,
+      "format": "webp",
+      "sha256": "844ce7253f15ce6de21e7efa6cb5074ed8a3e12cd0e816eeeb09fd5cea0b0a72",
+      "alt": "点击后姓名和城市实际写入，与侧栏反馈对应",
+      "scene": "filled",
+      "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
+      "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
+    },
+    {
+      "path": "applyflow-detail-filled-form-mobile.webp",
+      "width": 900,
+      "height": 600,
+      "format": "webp",
+      "sha256": "f0b3edefc01bc0d8d9ce3127a7caaaeacc377172a8ab40b515d048fd6d7959cd",
+      "alt": "受控表单姓名和城市字段，已实际写入沈予安与杭州",
+      "scene": "same filled / form",
+      "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
+      "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
+    },
+    {
+      "path": "applyflow-detail-filled-sidebar-mobile.webp",
+      "width": 900,
+      "height": 1200,
+      "format": "webp",
+      "sha256": "5ce9fdc8299d4f5e0bd4a3072097ab5c2270e8dfb12add1824752dbb77adf887",
+      "alt": "同状态侧栏对应姓名、城市档案值及主动填写操作",
+      "scene": "same filled / sidebar",
+      "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
+      "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
+    },
+    {
+      "path": "applyflow-detail-review-desktop.webp",
+      "width": 1600,
+      "height": 1200,
+      "format": "webp",
+      "sha256": "b9c742639fafd702692811c8f5b94a5db0dad27a8288ffe4f86caf7916700371",
+      "alt": "招聘信息来源仍空白，与侧栏人工填写提示对应",
+      "scene": "review",
+      "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
+      "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
+    },
+    {
+      "path": "applyflow-detail-review-form-mobile.webp",
+      "width": 900,
+      "height": 600,
+      "format": "webp",
+      "sha256": "df183b0eab7eb3bdcaac470e4e972683a4c0a86f50a95f3337bd71cf19416184",
+      "alt": "招聘信息来源完整空白字段等待人工补充",
+      "scene": "review / form",
+      "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
+      "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
+    },
+    {
+      "path": "applyflow-detail-review-sidebar-mobile.webp",
+      "width": 900,
+      "height": 1000,
+      "format": "webp",
+      "sha256": "55b8a39b218c75ffd3b505b4262e98ca6e5744aff90cffbae5586dd9ad0fc330",
+      "alt": "招聘信息来源对应的真实人工填写提示",
+      "scene": "review / sidebar",
+      "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
+      "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
+    },
+    {
+      "path": "applyflow-detail-profile-desktop.webp",
+      "width": 1600,
+      "height": 1200,
+      "format": "webp",
+      "sha256": "3c4dba79447483f88fc0253828a57330bdf45a0a46e28daf41f70a3884282286",
+      "alt": "本地档案编辑页，包含基本信息、教育与保存操作",
+      "scene": "profile",
+      "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
+      "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
+    },
+    {
+      "path": "applyflow-detail-profile-basic-mobile.webp",
+      "width": 900,
+      "height": 1050,
+      "format": "webp",
+      "sha256": "168219bd2f701c9dbfc2e01de6e3dfb0bc24a8b848afbacaa1c5fb29a1d9b336",
+      "alt": "档案基本信息字段与完整虚构值，桌面扩展局部",
+      "scene": "profile basic",
+      "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
+      "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
+    },
+    {
+      "path": "applyflow-detail-profile-education-mobile.webp",
+      "width": 900,
+      "height": 1200,
+      "format": "webp",
+      "sha256": "5acf03698d3a99baa63e42fb48c392ee23703095ca4391576e605db6291fd6f8",
+      "alt": "教育信息与页面原有保存操作，桌面扩展局部",
+      "scene": "profile education",
+      "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
+      "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
+    }
+  ],
+  "deliveryStatus": "partial-awaiting-framing-acceptance",
+  "openIssues": [
+    "288px侧栏关键标签约10–12px，未达到约14px目标",
+    "档案桌面全景字小；教育手机取景下方日期不完整",
+    "review桌面图估算区域仍需紧取景复核"
+  ]
+}
