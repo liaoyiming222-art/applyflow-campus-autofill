@@ -1,6 +1,12 @@
 {
   "codeCommit": "594946947787a072082f193b0549b9942b05cba3",
   "version": "0.7.8",
+  "revision": "detail-v2-20261104-applyflow-r1",
+  "browserSettings": {
+    "minimumFontSize": 20,
+    "zoom": 1,
+    "deviceScaleFactor": 2
+  },
   "runtimeHashes": {
     "manifest.json": "b1e9dd84e917377d69fa835d8e7593ea09aea55cc53aadfefc695d4567f50a2b",
     "tools/brand-preview.mjs": "c4466ef27fba10e2cb28c966cefbcfcfab24cf86faf6fbaae6f2c70c337ce970",
@@ -59,18 +65,18 @@
     "events": [
       {
         "type": "APPLYFLOW_HIDE_ORB",
-        "at": "2026-11-04T05:37:29.002Z",
+        "at": "2026-11-04T08:40:54.948Z",
         "result": {
           "ok": true
         }
       },
       {
         "type": "APPLYFLOW_SCAN",
-        "at": "2026-11-04T05:37:29.002Z",
+        "at": "2026-11-04T08:40:54.948Z",
         "result": {
           "entries": [
             {
-              "id": "af-0-1793770649004",
+              "id": "af-0-1793781654949",
               "label": "中文姓名*",
               "fieldKey": "basic.nameZh",
               "controlType": "text",
@@ -81,7 +87,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-1-1793770649005",
+              "id": "af-1-1793781654949",
               "label": "当前城市",
               "fieldKey": "basic.currentCity",
               "controlType": "text",
@@ -92,7 +98,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-2-1793770649005",
+              "id": "af-2-1793781654949",
               "label": "手机号码*",
               "fieldKey": "basic.phone",
               "controlType": "text",
@@ -103,7 +109,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-3-1793770649005",
+              "id": "af-3-1793781654949",
               "label": "电子邮箱*",
               "fieldKey": "basic.email",
               "controlType": "text",
@@ -114,7 +120,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-4-1793770649006",
+              "id": "af-4-1793781654949",
               "label": "院校名称*",
               "fieldKey": "education.school",
               "controlType": "text",
@@ -125,7 +131,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-5-1793770649006",
+              "id": "af-5-1793781654950",
               "label": "所学专业*",
               "fieldKey": "education.major",
               "controlType": "text",
@@ -136,7 +142,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-6-1793770649006",
+              "id": "af-6-1793781654950",
               "label": "学历",
               "fieldKey": "education.level",
               "controlType": "select",
@@ -147,7 +153,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-7-1793770649007",
+              "id": "af-7-1793781654950",
               "label": "预计毕业时间*",
               "fieldKey": "education.endDate",
               "controlType": "date",
@@ -158,7 +164,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-8-1793770649007",
+              "id": "af-8-1793781654950",
               "label": "招聘信息来源",
               "fieldKey": "preferences.recruitmentSource",
               "controlType": "select",
@@ -181,18 +187,18 @@
       },
       {
         "type": "APPLYFLOW_HIDE_ORB",
-        "at": "2026-11-04T05:37:29.160Z",
+        "at": "2026-11-04T08:40:55.092Z",
         "result": {
           "ok": true
         }
       },
       {
         "type": "APPLYFLOW_SCAN",
-        "at": "2026-11-04T05:37:29.160Z",
+        "at": "2026-11-04T08:40:55.092Z",
         "result": {
           "entries": [
             {
-              "id": "af-0-1793770649160",
+              "id": "af-0-1793781655092",
               "label": "中文姓名*",
               "fieldKey": "basic.nameZh",
               "controlType": "text",
@@ -203,7 +209,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-1-1793770649160",
+              "id": "af-1-1793781655092",
               "label": "当前城市",
               "fieldKey": "basic.currentCity",
               "controlType": "text",
@@ -214,7 +220,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-2-1793770649161",
+              "id": "af-2-1793781655092",
               "label": "手机号码*",
               "fieldKey": "basic.phone",
               "controlType": "text",
@@ -225,7 +231,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-3-1793770649161",
+              "id": "af-3-1793781655093",
               "label": "电子邮箱*",
               "fieldKey": "basic.email",
               "controlType": "text",
@@ -236,7 +242,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-4-1793770649161",
+              "id": "af-4-1793781655093",
               "label": "院校名称*",
               "fieldKey": "education.school",
               "controlType": "text",
@@ -247,7 +253,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-5-1793770649161",
+              "id": "af-5-1793781655093",
               "label": "所学专业*",
               "fieldKey": "education.major",
               "controlType": "text",
@@ -258,7 +264,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-6-1793770649161",
+              "id": "af-6-1793781655093",
               "label": "学历",
               "fieldKey": "education.level",
               "controlType": "select",
@@ -269,7 +275,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-7-1793770649161",
+              "id": "af-7-1793781655093",
               "label": "预计毕业时间*",
               "fieldKey": "education.endDate",
               "controlType": "date",
@@ -280,7 +286,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-8-1793770649161",
+              "id": "af-8-1793781655093",
               "label": "招聘信息来源",
               "fieldKey": "preferences.recruitmentSource",
               "controlType": "select",
@@ -303,7 +309,7 @@
       },
       {
         "type": "APPLYFLOW_HIDE_ORB",
-        "at": "2026-11-04T05:37:30.370Z",
+        "at": "2026-11-04T08:40:56.312Z",
         "result": {
           "ok": true
         }
@@ -352,18 +358,18 @@
     "events": [
       {
         "type": "APPLYFLOW_HIDE_ORB",
-        "at": "2026-11-04T05:37:29.002Z",
+        "at": "2026-11-04T08:40:54.948Z",
         "result": {
           "ok": true
         }
       },
       {
         "type": "APPLYFLOW_SCAN",
-        "at": "2026-11-04T05:37:29.002Z",
+        "at": "2026-11-04T08:40:54.948Z",
         "result": {
           "entries": [
             {
-              "id": "af-0-1793770649004",
+              "id": "af-0-1793781654949",
               "label": "中文姓名*",
               "fieldKey": "basic.nameZh",
               "controlType": "text",
@@ -374,7 +380,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-1-1793770649005",
+              "id": "af-1-1793781654949",
               "label": "当前城市",
               "fieldKey": "basic.currentCity",
               "controlType": "text",
@@ -385,7 +391,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-2-1793770649005",
+              "id": "af-2-1793781654949",
               "label": "手机号码*",
               "fieldKey": "basic.phone",
               "controlType": "text",
@@ -396,7 +402,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-3-1793770649005",
+              "id": "af-3-1793781654949",
               "label": "电子邮箱*",
               "fieldKey": "basic.email",
               "controlType": "text",
@@ -407,7 +413,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-4-1793770649006",
+              "id": "af-4-1793781654949",
               "label": "院校名称*",
               "fieldKey": "education.school",
               "controlType": "text",
@@ -418,7 +424,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-5-1793770649006",
+              "id": "af-5-1793781654950",
               "label": "所学专业*",
               "fieldKey": "education.major",
               "controlType": "text",
@@ -429,7 +435,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-6-1793770649006",
+              "id": "af-6-1793781654950",
               "label": "学历",
               "fieldKey": "education.level",
               "controlType": "select",
@@ -440,7 +446,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-7-1793770649007",
+              "id": "af-7-1793781654950",
               "label": "预计毕业时间*",
               "fieldKey": "education.endDate",
               "controlType": "date",
@@ -451,7 +457,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-8-1793770649007",
+              "id": "af-8-1793781654950",
               "label": "招聘信息来源",
               "fieldKey": "preferences.recruitmentSource",
               "controlType": "select",
@@ -474,18 +480,18 @@
       },
       {
         "type": "APPLYFLOW_HIDE_ORB",
-        "at": "2026-11-04T05:37:29.160Z",
+        "at": "2026-11-04T08:40:55.092Z",
         "result": {
           "ok": true
         }
       },
       {
         "type": "APPLYFLOW_SCAN",
-        "at": "2026-11-04T05:37:29.160Z",
+        "at": "2026-11-04T08:40:55.092Z",
         "result": {
           "entries": [
             {
-              "id": "af-0-1793770649160",
+              "id": "af-0-1793781655092",
               "label": "中文姓名*",
               "fieldKey": "basic.nameZh",
               "controlType": "text",
@@ -496,7 +502,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-1-1793770649160",
+              "id": "af-1-1793781655092",
               "label": "当前城市",
               "fieldKey": "basic.currentCity",
               "controlType": "text",
@@ -507,7 +513,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-2-1793770649161",
+              "id": "af-2-1793781655092",
               "label": "手机号码*",
               "fieldKey": "basic.phone",
               "controlType": "text",
@@ -518,7 +524,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-3-1793770649161",
+              "id": "af-3-1793781655093",
               "label": "电子邮箱*",
               "fieldKey": "basic.email",
               "controlType": "text",
@@ -529,7 +535,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-4-1793770649161",
+              "id": "af-4-1793781655093",
               "label": "院校名称*",
               "fieldKey": "education.school",
               "controlType": "text",
@@ -540,7 +546,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-5-1793770649161",
+              "id": "af-5-1793781655093",
               "label": "所学专业*",
               "fieldKey": "education.major",
               "controlType": "text",
@@ -551,7 +557,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-6-1793770649161",
+              "id": "af-6-1793781655093",
               "label": "学历",
               "fieldKey": "education.level",
               "controlType": "select",
@@ -562,7 +568,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-7-1793770649161",
+              "id": "af-7-1793781655093",
               "label": "预计毕业时间*",
               "fieldKey": "education.endDate",
               "controlType": "date",
@@ -573,7 +579,7 @@
               "controlSlot": ""
             },
             {
-              "id": "af-8-1793770649161",
+              "id": "af-8-1793781655093",
               "label": "招聘信息来源",
               "fieldKey": "preferences.recruitmentSource",
               "controlType": "select",
@@ -596,14 +602,272 @@
       },
       {
         "type": "APPLYFLOW_HIDE_ORB",
-        "at": "2026-11-04T05:37:30.370Z",
+        "at": "2026-11-04T08:40:56.312Z",
         "result": {
           "ok": true
         }
       },
       {
+        "type": "APPLYFLOW_DISABLE",
+        "at": "2026-11-04T08:40:56.326Z",
+        "result": {
+          "ok": true
+        }
+      },
+      {
+        "type": "APPLYFLOW_HIDE_ORB",
+        "at": "2026-11-04T08:40:56.909Z",
+        "result": {
+          "ok": true
+        }
+      },
+      {
+        "type": "APPLYFLOW_SCAN",
+        "at": "2026-11-04T08:40:56.956Z",
+        "result": {
+          "entries": [
+            {
+              "id": "af-0-1793781656957",
+              "label": "中文姓名*",
+              "fieldKey": "basic.nameZh",
+              "controlType": "text",
+              "valuePreview": "沈予安",
+              "canFill": true,
+              "unsupported": false,
+              "occurrence": 0,
+              "controlSlot": ""
+            },
+            {
+              "id": "af-1-1793781656957",
+              "label": "当前城市",
+              "fieldKey": "basic.currentCity",
+              "controlType": "text",
+              "valuePreview": "杭州",
+              "canFill": true,
+              "unsupported": false,
+              "occurrence": 0,
+              "controlSlot": ""
+            },
+            {
+              "id": "af-2-1793781656957",
+              "label": "手机号码*",
+              "fieldKey": "basic.phone",
+              "controlType": "text",
+              "valuePreview": "00000000000",
+              "canFill": true,
+              "unsupported": false,
+              "occurrence": 0,
+              "controlSlot": ""
+            },
+            {
+              "id": "af-3-1793781656958",
+              "label": "电子邮箱*",
+              "fieldKey": "basic.email",
+              "controlType": "text",
+              "valuePreview": "yu***@example.invalid",
+              "canFill": true,
+              "unsupported": false,
+              "occurrence": 0,
+              "controlSlot": ""
+            },
+            {
+              "id": "af-4-1793781656958",
+              "label": "院校名称*",
+              "fieldKey": "education.school",
+              "controlType": "text",
+              "valuePreview": "青禾示例大学",
+              "canFill": true,
+              "unsupported": false,
+              "occurrence": 0,
+              "controlSlot": ""
+            },
+            {
+              "id": "af-5-1793781656958",
+              "label": "所学专业*",
+              "fieldKey": "education.major",
+              "controlType": "text",
+              "valuePreview": "软件工程",
+              "canFill": true,
+              "unsupported": false,
+              "occurrence": 0,
+              "controlSlot": ""
+            },
+            {
+              "id": "af-6-1793781656958",
+              "label": "学历",
+              "fieldKey": "education.level",
+              "controlType": "select",
+              "valuePreview": "硕士研究生",
+              "canFill": true,
+              "unsupported": false,
+              "occurrence": 0,
+              "controlSlot": ""
+            },
+            {
+              "id": "af-7-1793781656958",
+              "label": "预计毕业时间*",
+              "fieldKey": "education.endDate",
+              "controlType": "date",
+              "valuePreview": "2027-06",
+              "canFill": true,
+              "unsupported": false,
+              "occurrence": 0,
+              "controlSlot": ""
+            },
+            {
+              "id": "af-8-1793781656958",
+              "label": "招聘信息来源",
+              "fieldKey": "preferences.recruitmentSource",
+              "controlType": "select",
+              "valuePreview": "",
+              "canFill": false,
+              "unsupported": false,
+              "occurrence": 0,
+              "controlSlot": ""
+            }
+          ],
+          "fillableCount": 8,
+          "missingCount": 1,
+          "manualCount": 0,
+          "detectedControlCount": 9,
+          "matchedFieldCount": 9,
+          "unmatchedControlCount": 0,
+          "recognizedControlCount": 9,
+          "estimatedManualSeconds": 95
+        }
+      },
+      {
+        "type": "APPLYFLOW_DISABLE",
+        "at": "2026-11-04T08:40:57.331Z",
+        "result": {
+          "ok": true
+        }
+      },
+      {
+        "type": "APPLYFLOW_HIDE_ORB",
+        "at": "2026-11-04T08:40:57.796Z",
+        "result": {
+          "ok": true
+        }
+      },
+      {
+        "type": "APPLYFLOW_SCAN",
+        "at": "2026-11-04T08:40:57.822Z",
+        "result": {
+          "entries": [
+            {
+              "id": "af-0-1793781657823",
+              "label": "中文姓名*",
+              "fieldKey": "basic.nameZh",
+              "controlType": "text",
+              "valuePreview": "沈予安",
+              "canFill": true,
+              "unsupported": false,
+              "occurrence": 0,
+              "controlSlot": ""
+            },
+            {
+              "id": "af-1-1793781657823",
+              "label": "当前城市",
+              "fieldKey": "basic.currentCity",
+              "controlType": "text",
+              "valuePreview": "杭州",
+              "canFill": true,
+              "unsupported": false,
+              "occurrence": 0,
+              "controlSlot": ""
+            },
+            {
+              "id": "af-2-1793781657823",
+              "label": "手机号码*",
+              "fieldKey": "basic.phone",
+              "controlType": "text",
+              "valuePreview": "00000000000",
+              "canFill": true,
+              "unsupported": false,
+              "occurrence": 0,
+              "controlSlot": ""
+            },
+            {
+              "id": "af-3-1793781657823",
+              "label": "电子邮箱*",
+              "fieldKey": "basic.email",
+              "controlType": "text",
+              "valuePreview": "yu***@example.invalid",
+              "canFill": true,
+              "unsupported": false,
+              "occurrence": 0,
+              "controlSlot": ""
+            },
+            {
+              "id": "af-4-1793781657823",
+              "label": "院校名称*",
+              "fieldKey": "education.school",
+              "controlType": "text",
+              "valuePreview": "青禾示例大学",
+              "canFill": true,
+              "unsupported": false,
+              "occurrence": 0,
+              "controlSlot": ""
+            },
+            {
+              "id": "af-5-1793781657823",
+              "label": "所学专业*",
+              "fieldKey": "education.major",
+              "controlType": "text",
+              "valuePreview": "软件工程",
+              "canFill": true,
+              "unsupported": false,
+              "occurrence": 0,
+              "controlSlot": ""
+            },
+            {
+              "id": "af-6-1793781657824",
+              "label": "学历",
+              "fieldKey": "education.level",
+              "controlType": "select",
+              "valuePreview": "硕士研究生",
+              "canFill": true,
+              "unsupported": false,
+              "occurrence": 0,
+              "controlSlot": ""
+            },
+            {
+              "id": "af-7-1793781657824",
+              "label": "预计毕业时间*",
+              "fieldKey": "education.endDate",
+              "controlType": "date",
+              "valuePreview": "2027-06",
+              "canFill": true,
+              "unsupported": false,
+              "occurrence": 0,
+              "controlSlot": ""
+            },
+            {
+              "id": "af-8-1793781657824",
+              "label": "招聘信息来源",
+              "fieldKey": "preferences.recruitmentSource",
+              "controlType": "select",
+              "valuePreview": "",
+              "canFill": false,
+              "unsupported": false,
+              "occurrence": 0,
+              "controlSlot": ""
+            }
+          ],
+          "fillableCount": 8,
+          "missingCount": 1,
+          "manualCount": 0,
+          "detectedControlCount": 9,
+          "matchedFieldCount": 9,
+          "unmatchedControlCount": 0,
+          "recognizedControlCount": 9,
+          "estimatedManualSeconds": 95
+        }
+      },
+      {
         "type": "APPLYFLOW_FILL",
-        "at": "2026-11-04T05:37:32.179Z",
+        "at": "2026-11-04T08:40:58.145Z",
         "result": {
           "filledCount": 8,
           "failedCount": 0,

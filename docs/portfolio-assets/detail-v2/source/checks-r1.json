@@ -1,0 +1,26 @@
+{
+  "taskId": "detail-v2-20261104-applyflow",
+  "revision": "detail-v2-20261104-applyflow-r1",
+  "preservedByteIdentical": [
+    "applyflow-detail-overview-desktop.webp",
+    "applyflow-detail-scan-desktop.webp",
+    "applyflow-detail-filled-desktop.webp",
+    "applyflow-detail-review-desktop.webp",
+    "applyflow-detail-review-form-mobile.webp"
+  ],
+  "images": 15,
+  "replaced": 10,
+  "codeCommit": "594946947787a072082f193b0549b9942b05cba3",
+  "browserSettings": {
+    "minimumFontSize": 20,
+    "zoom": 1,
+    "deviceScaleFactor": 2
+  },
+  "qaWidths": [
+    288,
+    358
+  ],
+  "limitations": [
+    "待总控按自然高度与桌面全宽接入复核；教育手机288px关键字约13px，接近约14px目标，358px约16px"
+  ]
+}

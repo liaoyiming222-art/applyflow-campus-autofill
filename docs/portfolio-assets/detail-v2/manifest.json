@@ -6,6 +6,8 @@
   "codeCommit": "594946947787a072082f193b0549b9942b05cba3",
   "version": "0.7.8",
   "workspace": "isolated clean runtime; original dirty 0.8.7 untouched",
+  "revision": "detail-v2-20261104-applyflow-r1",
+  "previousAssetCommit": "3c16facc04627eea6171012d81be318392cc7329",
   "assets": [
     {
       "path": "applyflow-detail-overview-desktop.webp",
@@ -21,10 +23,10 @@
     {
       "path": "applyflow-detail-overview-form-mobile.webp",
       "width": 900,
-      "height": 600,
+      "height": 347,
       "format": "webp",
-      "sha256": "5a92ac16e769bb76608ccb6cb903041ef53e7f38f22f3aee757ca6562df9e01b",
-      "alt": "受控表单姓名和城市字段，尚未写入",
+      "sha256": "163e4649970639ebd1c5b7a7e33e969e6cce150bd827ea7c95b87439b593ea75",
+      "alt": "姓名与城市两项完整字段，识别后尚未填入",
       "scene": "same overview / form",
       "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
       "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
@@ -32,10 +34,10 @@
     {
       "path": "applyflow-detail-overview-sidebar-mobile.webp",
       "width": 900,
-      "height": 1200,
+      "height": 921,
       "format": "webp",
-      "sha256": "5db26253501d1ec368a93a286de13f3c8e1ba5de3755aa21ada8796f6eec830d",
-      "alt": "同状态侧栏对应姓名、城市档案值及主动填写操作",
+      "sha256": "3a8a19b08ba5dec6da13e28ba90e454df1000f3a829dba9ff8635b74f277139a",
+      "alt": "姓名城市完整档案值与主动填写操作，原侧栏连接同一真实表单",
       "scene": "same overview / sidebar",
       "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
       "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
@@ -54,10 +56,10 @@
     {
       "path": "applyflow-detail-scan-form-mobile.webp",
       "width": 900,
-      "height": 600,
+      "height": 347,
       "format": "webp",
-      "sha256": "6aee3f2a11de25dd3bb92198c8ac63afde149eafcb7a02285fbd558749746aa8",
-      "alt": "受控表单姓名和城市字段，尚未写入",
+      "sha256": "163e4649970639ebd1c5b7a7e33e969e6cce150bd827ea7c95b87439b593ea75",
+      "alt": "姓名与城市两项完整字段，识别后尚未填入",
       "scene": "same scan / form",
       "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
       "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
@@ -65,10 +67,10 @@
     {
       "path": "applyflow-detail-scan-sidebar-mobile.webp",
       "width": 900,
-      "height": 1200,
+      "height": 921,
       "format": "webp",
-      "sha256": "5db26253501d1ec368a93a286de13f3c8e1ba5de3755aa21ada8796f6eec830d",
-      "alt": "同状态侧栏对应姓名、城市档案值及主动填写操作",
+      "sha256": "3a8a19b08ba5dec6da13e28ba90e454df1000f3a829dba9ff8635b74f277139a",
+      "alt": "姓名城市完整档案值与主动填写操作，原侧栏连接同一真实表单",
       "scene": "same scan / sidebar",
       "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
       "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
@@ -87,10 +89,10 @@
     {
       "path": "applyflow-detail-filled-form-mobile.webp",
       "width": 900,
-      "height": 600,
+      "height": 347,
       "format": "webp",
-      "sha256": "f0b3edefc01bc0d8d9ce3127a7caaaeacc377172a8ab40b515d048fd6d7959cd",
-      "alt": "受控表单姓名和城市字段，已实际写入沈予安与杭州",
+      "sha256": "5daa66546e4428e273d32725074269741cc94934981d40a4b1896a807448dbf8",
+      "alt": "姓名与城市两项完整字段，已填入沈予安与杭州",
       "scene": "same filled / form",
       "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
       "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
@@ -98,10 +100,10 @@
     {
       "path": "applyflow-detail-filled-sidebar-mobile.webp",
       "width": 900,
-      "height": 1200,
+      "height": 921,
       "format": "webp",
-      "sha256": "5ce9fdc8299d4f5e0bd4a3072097ab5c2270e8dfb12add1824752dbb77adf887",
-      "alt": "同状态侧栏对应姓名、城市档案值及主动填写操作",
+      "sha256": "3a8a19b08ba5dec6da13e28ba90e454df1000f3a829dba9ff8635b74f277139a",
+      "alt": "姓名城市完整档案值与主动填写操作，原侧栏连接同一真实表单",
       "scene": "same filled / sidebar",
       "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
       "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
@@ -131,9 +133,9 @@
     {
       "path": "applyflow-detail-review-sidebar-mobile.webp",
       "width": 900,
-      "height": 1000,
+      "height": 197,
       "format": "webp",
-      "sha256": "55b8a39b218c75ffd3b505b4262e98ca6e5744aff90cffbae5586dd9ad0fc330",
+      "sha256": "10bebd5293ca7adfb3bfc0be89fd97c857157426455063971539c0d07e367683",
       "alt": "招聘信息来源对应的真实人工填写提示",
       "scene": "review / sidebar",
       "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
@@ -142,10 +144,10 @@
     {
       "path": "applyflow-detail-profile-desktop.webp",
       "width": 1600,
-      "height": 1200,
+      "height": 3848,
       "format": "webp",
-      "sha256": "3c4dba79447483f88fc0253828a57330bdf45a0a46e28daf41f70a3884282286",
-      "alt": "本地档案编辑页，包含基本信息、教育与保存操作",
+      "sha256": "6b9af8ab27a9ce8c029fac68f802348679d6f64ec3667455460f0493db54238e",
+      "alt": "本地档案基本资料、教育与真实保存操作，连续自然长图",
       "scene": "profile",
       "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
       "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
@@ -153,10 +155,10 @@
     {
       "path": "applyflow-detail-profile-basic-mobile.webp",
       "width": 900,
-      "height": 1050,
+      "height": 843,
       "format": "webp",
-      "sha256": "168219bd2f701c9dbfc2e01de6e3dfb0bc24a8b848afbacaa1c5fb29a1d9b336",
-      "alt": "档案基本信息字段与完整虚构值，桌面扩展局部",
+      "sha256": "dddada3c33f745d5a05a9c846abb477d7c58f6494164f086d35231a8957af06e",
+      "alt": "从中文姓名沈予安开始的四个完整基本信息字段",
       "scene": "profile basic",
       "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
       "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
@@ -164,19 +166,35 @@
     {
       "path": "applyflow-detail-profile-education-mobile.webp",
       "width": 900,
-      "height": 1200,
+      "height": 2035,
       "format": "webp",
-      "sha256": "5acf03698d3a99baa63e42fb48c392ee23703095ca4391576e605db6291fd6f8",
-      "alt": "教育信息与页面原有保存操作，桌面扩展局部",
+      "sha256": "9ee6563ca754f883361267355a35d68503dbc8b0206d7b47942792ea3cc6b0c2",
+      "alt": "同一档案教育字段，完整学校、专业、学历、毕业日期及原生保存操作",
       "scene": "profile education",
       "sourceType": "固定源码真实组件与填写引擎；虚构表单与档案，临时内存消息桥；真实截图等比排版",
       "limitations": "桌面扩展局部；不是手机安装界面；时间仅算法估算；不自动提交"
     }
   ],
-  "deliveryStatus": "partial-awaiting-framing-acceptance",
+  "deliveryStatus": "r1-awaiting-review",
+  "browserSettings": {
+    "minimumFontSize": 20,
+    "zoom": 1,
+    "deviceScaleFactor": 2
+  },
+  "cropping": "10指定文件自然高度；5张旧文件字节保留；浏览器最小字号设置不改DOM/CSS",
   "openIssues": [
-    "288px侧栏关键标签约10–12px，未达到约14px目标",
-    "档案桌面全景字小；教育手机取景下方日期不完整",
-    "review桌面图估算区域仍需紧取景复核"
+    "待总控按自然高度与桌面全宽接入复核；教育手机288px关键字约13px，接近约14px目标，358px约16px"
+  ],
+  "proof": [
+    {
+      "path": "source/qa-288.png",
+      "sha256": "1e183cfeea9bed5596f048d23042b086592dfcc4148820ec7468aed7f3532104",
+      "purpose": "目标CSS显示宽度校样"
+    },
+    {
+      "path": "source/qa-358.png",
+      "sha256": "da428209b15038da4c419258ba585b7e77461634f1b26fec889ec6feee1c8d29",
+      "purpose": "目标CSS显示宽度校样"
+    }
   ]
 }
